@@ -99,9 +99,9 @@ export default function Home() {
           <div className="w-16 h-1 bg-saffron mx-auto mt-2 rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           <DevotionalCard
-            title="हनुमान चालीसा पढ़ें"
+            title="हनुमान चालीसा"
             description="श्री हनुमान चालीसा का संपूर्ण पाठ पढ़ें। बड़े अक्षरों में सहज और शुद्ध वाचन।"
             to="/hanuman-chalisa"
             icon={BookOpen}
@@ -109,8 +109,16 @@ export default function Home() {
           />
 
           <DevotionalCard
-            title="आरती करें"
-            description="श्रद्धा और भक्ति के साथ हनुमान जी की आरती पढ़ें। आरती कीजै हनुमान लला की।"
+            title="संकट मोचन हनुमानाष्टक"
+            description="गोस्वामी तुलसीदास जी रचित संकट निवारक ८ पावन पदों का संपूर्ण पाठ व भावार्थ।"
+            to="/hanumanashtak"
+            icon={Shield}
+            badgeText="संकट निवारण"
+          />
+
+          <DevotionalCard
+            title="हनुमान जी की आरती"
+            description="श्रद्धा और भक्ति के साथ आरती पढ़ें। आरती कीजै हनुमान लला की दुष्ट दलन।"
             to="/aarti"
             icon={Flame}
             badgeText="मंगल आरती"
@@ -333,9 +341,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="p-3 bg-green-50/80 border border-green-200 rounded-xl text-xs text-green-900 leading-relaxed flex items-center gap-2">
-                <span className="font-bold text-green-800">सत्यापित स्थिति: </span>
-                <span>गूगल मैप्स पर 'Sankat Mochan Mandir Dehariya' के रूप में स्थान प्रमाणित है।</span>
+              <div className="p-3 bg-saffron/10 border border-saffron/30 rounded-xl text-xs text-templeRed font-medium leading-relaxed flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-saffron flex-shrink-0" />
+                <span>श्री संकट मोचन हनुमान जी का पावन धाम, ग्राम डेहरिया, महाराजगंज, भदोही।</span>
               </div>
             </div>
 

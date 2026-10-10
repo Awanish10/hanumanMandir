@@ -11,6 +11,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://nimble-tuba-4phm9vi.vercel.app/hanumanashtak</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://nimble-tuba-4phm9vi.vercel.app/aarti</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>

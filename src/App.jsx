@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 // Pages
 import Home from './pages/Home';
 import HanumanChalisa from './pages/HanumanChalisa';
+import Hanumanashtak from './pages/Hanumanashtak';
 import Aarti from './pages/Aarti';
 import HanumanKatha from './pages/HanumanKatha';
 import StoryDetail from './pages/StoryDetail';
@@ -51,6 +52,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/hanuman-chalisa" element={<HanumanChalisa />} />
+          <Route path="/hanumanashtak" element={<Hanumanashtak />} />
+          <Route path="/sankat-mochan-hanumanashtak" element={<Hanumanashtak />} />
           <Route path="/aarti" element={<Aarti />} />
           
           {/* Stories routes */}

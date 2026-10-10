@@ -13,7 +13,8 @@ import {
   Sparkles,
   ChevronRight,
   Navigation,
-  HeartHandshake
+  HeartHandshake,
+  Shield
 } from 'lucide-react';
 import { templeInfo } from '../data/temple';
 
@@ -23,10 +24,11 @@ export default function Navbar({ isOpen, setIsOpen }) {
   const navLinks = [
     { name: 'होम', path: '/', icon: Home, subtitle: 'मुखपृष्ठ' },
     { name: 'हनुमान चालीसा', path: '/hanuman-chalisa', icon: BookOpen, subtitle: 'संपूर्ण पाठ एवं अर्थ' },
+    { name: 'हनुमानाष्टक', path: '/hanumanashtak', icon: Shield, subtitle: 'संकट मोचन हनुमानाष्टक' },
     { name: 'आरती', path: '/aarti', icon: Flame, subtitle: 'आरती कीजै हनुमान लला की' },
     { name: 'हनुमान जी की कथा', path: '/hanuman-katha', icon: ScrollText, subtitle: '८ पावन चरित्र एवं सीख' },
     { name: 'फोटो गैलरी', path: '/gallery', icon: ImageIcon, subtitle: 'दर्शन एवं दिव्य छवियाँ' },
-    { name: 'मंदिर की जानकारी', path: '/mandir', icon: MapPin, subtitle: 'सत्यापित स्थान व विवरण' },
+    { name: 'मंदिर की जानकारी', path: '/mandir', icon: MapPin, subtitle: 'स्थान, आरती व पर्व' },
     { name: 'दान एवं सहयोग', path: '/donation', icon: HeartHandshake, subtitle: 'PhonePe QR से सेवा' },
     { name: 'भक्ति और दोहे', path: '/bhakti', icon: Sparkles, subtitle: 'शास्त्र सम्मत दोहे' },
   ];
@@ -219,7 +221,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
 
           {/* Desktop Navigation Links (>= lg) */}
           <nav
-            className="hidden lg:flex items-center gap-1 xl:gap-2"
+            className="hidden lg:flex items-center gap-0.5 xl:gap-1.5"
             aria-label="मुख्य नेविगेशन"
           >
             {navLinks.map((link) => (
@@ -227,7 +229,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
                 key={link.path}
                 to={link.path}
                 className={({ isActive }) =>
-                  `px-2 xl:px-3 py-1.5 xl:py-2 rounded-xl text-xs xl:text-sm font-semibold transition-all relative ${
+                  `px-1.5 xl:px-2.5 py-1.5 rounded-xl text-xs xl:text-sm font-semibold transition-all relative ${
                     isActive
                       ? 'text-templeRed bg-cream-dark/60 font-bold shadow-sm'
                       : 'text-templeText hover:text-saffron-deep hover:bg-cream/70'

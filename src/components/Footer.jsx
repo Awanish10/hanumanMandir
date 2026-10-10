@@ -9,6 +9,7 @@ export default function Footer() {
   const quickLinks = [
     { name: 'मुखपृष्ठ (Home)', path: '/' },
     { name: 'श्री हनुमान चालीसा', path: '/hanuman-chalisa' },
+    { name: 'संकट मोचन हनुमानाष्टक', path: '/hanumanashtak' },
     { name: 'श्री हनुमान आरती', path: '/aarti' },
     { name: 'हनुमान जी की कथाएँ', path: '/hanuman-katha' },
     { name: 'फोटो गैलरी', path: '/gallery' },

@@ -253,34 +253,21 @@ export default function Donation() {
           </div>
         </div>
 
-        {/* 4. Transparency & Verification Card */}
+        {/* 4. Temple Location & Contact Card */}
         <div className="bg-cream/70 rounded-3xl p-6 sm:p-8 border border-gold/40 shadow-sm space-y-4">
           <div className="flex items-center gap-2.5 text-templeRed font-bold">
-            <ShieldCheck className="w-5 h-5 text-green-700 flex-shrink-0" />
+            <MapPin className="w-5 h-5 text-saffron-deep flex-shrink-0" />
             <h3 className="text-base sm:text-lg font-devanagari">
-              सत्यता एवं प्रामाणिकता सूचना (Official Verification)
+              मंदिर स्थिति एवं पता
             </h3>
           </div>
 
           <p className="text-xs sm:text-sm text-templeText leading-relaxed">
-            यह क्यूआर कोड मंदिर की आधिकारिक गूगल साइट{' '}
-            <a
-              href="https://sites.google.com/view/sankatmochanmandirdehariya/donation"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-saffron-deep font-semibold underline inline-flex items-center gap-1"
-            >
-              <span>(sites.google.com/view/sankatmochanmandirdehariya/donation)</span>
-              <ExternalLink className="w-3.5 h-3.5 inline" />
-            </a>{' '}
-            से सीधे प्राप्त एवं सत्यापित किया गया है। मंदिर समिति किसी भी बिचौलिये या अनधिकृत खाते में राशि स्वीकार नहीं करती।
+            {templeInfo.location.fullAddress}
           </p>
 
           <div className="pt-2 border-t border-gold/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-templeText-muted">
-            <div className="flex items-center gap-1.5">
-              <MapPin className="w-4 h-4 text-saffron flex-shrink-0" />
-              <span>{templeInfo.location.fullAddress}</span>
-            </div>
+            <span>पिन कोड: {templeInfo.location.pincode} | जनपद: {templeInfo.location.district} (उ.प्र.)</span>
 
             <a
               href={templeInfo.location.mapsDirectionsUrl}
@@ -288,7 +275,7 @@ export default function Donation() {
               rel="noopener noreferrer"
               className="text-templeRed font-bold hover:underline inline-flex items-center gap-1"
             >
-              <span>गूगल मैप्स पर स्थान देखें</span>
+              <span>गूगल मैप्स पर मार्ग देखें</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
           </div>

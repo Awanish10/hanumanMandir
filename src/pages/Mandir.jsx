@@ -88,15 +88,15 @@ export default function Mandir() {
               <div>
                 <div className="flex items-center gap-2">
                   <h2 className="text-xl sm:text-2xl font-bold font-devanagari text-templeRed">
-                    सत्यापित मंदिर स्थान (Exact Location)
+                    मंदिर स्थान एवं मानचित्र (Temple Location)
                   </h2>
-                  <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-green-100 text-green-800 border border-green-300">
-                    <CheckCircle className="w-3 h-3 text-green-600" />
-                    सत्यापित
+                  <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-saffron/15 text-templeRed border border-saffron/30">
+                    <Sparkles className="w-3 h-3 text-saffron fill-saffron" />
+                    पावन धाम
                   </span>
                 </div>
                 <p className="text-xs sm:text-sm text-templeText-muted">
-                  गूगल मैप्स: {templeInfo.officialPlaceName}
+                  {templeInfo.officialPlaceName}
                 </p>
               </div>
             </div>
@@ -200,13 +200,13 @@ export default function Mandir() {
                   <h2 className="text-xl sm:text-2xl font-bold font-devanagari text-templeRed">
                     दर्शन एवं आरती समय (Darshan & Aarti Timings)
                   </h2>
-                  <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-green-100 text-green-800 border border-green-300">
-                    <CheckCircle className="w-3 h-3 text-green-600" />
-                    पुष्ट समय
+                  <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-saffron/15 text-templeRed border border-saffron/30">
+                    <Sparkles className="w-3 h-3 text-saffron fill-saffron" />
+                    नित्य आरती
                   </span>
                 </div>
                 <p className="text-xs sm:text-sm text-templeText-muted">
-                  आधिकारिक गूगल साइट से सत्यापित दैनिक दर्शन व आरती
+                  प्रतिदिन प्रातः एवं सायं पावन आरती व दर्शन
                 </p>
               </div>
             </div>
@@ -356,27 +356,6 @@ export default function Mandir() {
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-        </div>
-
-        {/* 7. Transparency Policy */}
-        <div className="bg-cream/60 rounded-3xl p-6 border border-gold/30 text-xs sm:text-sm text-templeText-muted space-y-2">
-          <div className="flex items-center gap-2 font-bold text-templeRed">
-            <ShieldCheck className="w-4 h-4 text-green-700" />
-            <span>सत्यता एवं प्रामाणिकता:</span>
-          </div>
-          <p className="leading-relaxed">
-            यह वेबसाइट केवल आधिकारिक गूगल साइट{' '}
-            <a
-              href={templeInfo.location.officialGoogleSite}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-saffron-deep font-semibold underline inline-flex items-center gap-1"
-            >
-              <span>({templeInfo.location.officialGoogleSite})</span>
-              <ExternalLink className="w-3 h-3 inline" />
-            </a>{' '}
-            तथा गूगल मैप्स पर 'Sankat Mochan Mandir Dehariya' के सत्यापित विवरण प्रस्तुत करती है।
-          </p>
         </div>
 
       </div>
