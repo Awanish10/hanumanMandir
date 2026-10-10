@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-cream via-cream-light to-cream py-8 sm:py-14 border-b border-gold/30">
       {/* Background Decorative Temple Mandalas */}
-      <div className="absolute inset-0 pointer-events-none opacity-5">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-5">
         <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full border-[20px] border-saffron" />
         <div className="absolute -bottom-24 -right-24 w-96 h-96 rounded-full border-[20px] border-templeRed" />
       </div>

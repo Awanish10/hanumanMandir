@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import MobileBottomNav from './components/MobileBottomNav';
@@ -33,15 +33,20 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
-    <div className="min-h-screen flex flex-col bg-cream text-templeText selection:bg-saffron selection:text-white">
+    <div className="min-h-screen flex flex-col bg-cream text-templeText selection:bg-saffron selection:text-white overflow-x-hidden w-full max-w-full">
       <ScrollToTop />
       
       {/* Top Sticky Header */}
-      <Navbar />
+      <Navbar
+        isOpen={isMobileMenuOpen}
+        setIsOpen={setIsMobileMenuOpen}
+      />
 
       {/* Main Content Area - pb-20 on mobile to prevent MobileBottomNav overlap */}
-      <main className="flex-1 pb-20 md:pb-0" id="main-content">
+      <main className="flex-1 pb-20 md:pb-0 overflow-x-hidden w-full max-w-full" id="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/hanuman-chalisa" element={<HanumanChalisa />} />
@@ -65,7 +70,10 @@ export default function App() {
       <Footer />
 
       {/* Mobile Bottom Navigation (Visible on mobile only) */}
-      <MobileBottomNav />
+      <MobileBottomNav
+        isMenuOpen={isMobileMenuOpen}
+        setIsMenuOpen={setIsMobileMenuOpen}
+      />
     </div>
   );
 }
