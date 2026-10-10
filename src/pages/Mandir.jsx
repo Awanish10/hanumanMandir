@@ -13,7 +13,10 @@ import {
   Flame,
   HeartHandshake,
   ArrowRight,
-  Bell
+  Bell,
+  Phone,
+  MessageCircle,
+  PhoneCall
 } from 'lucide-react';
 import { templeInfo } from '../data/temple';
 
@@ -183,6 +186,46 @@ export default function Mandir() {
               >
                 <ExternalLink className="w-4 h-4 text-saffron" />
                 <span>गूगल मैप्स पर खोलें</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Website Update & Mandir Contact Box */}
+          <div className="p-5 bg-gradient-to-r from-cream-card via-white to-cream-card rounded-2xl border-2 border-gold/40 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3.5 text-left">
+              <div className="w-12 h-12 rounded-2xl bg-saffron/20 border border-gold/40 flex items-center justify-center text-templeRed flex-shrink-0">
+                <PhoneCall className="w-6 h-6 text-saffron-deep" />
+              </div>
+              <div>
+                <span className="text-xs font-bold text-saffron-deep uppercase tracking-wider block">
+                  वेबसाइट अद्यतन एवं संपर्क सहायता
+                </span>
+                <p className="text-sm font-bold text-templeText leading-snug">
+                  वेबसाइट में कोई भी जानकारी अपडेट करानी हो तो संपर्क करें:
+                </p>
+                <span className="text-base font-extrabold text-templeRed font-mono block mt-0.5">
+                  {templeInfo.contact.displayPhone}
+                </span>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2.5 flex-shrink-0 w-full sm:w-auto">
+              <a
+                href={templeInfo.contact.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-sm transition-all active:scale-95 min-h-[44px]"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span>व्हाट्सएप</span>
+              </a>
+
+              <a
+                href={`tel:${templeInfo.contact.phone}`}
+                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-saffron hover:bg-saffron-deep text-white font-bold text-xs sm:text-sm rounded-xl shadow-temple-sm transition-all active:scale-95 min-h-[44px]"
+              >
+                <Phone className="w-4 h-4" />
+                <span>कॉल करें</span>
               </a>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Heart, Sparkles } from 'lucide-react';
+import { MapPin, Heart, Sparkles, Phone, MessageCircle, PhoneCall } from 'lucide-react';
 import { templeInfo } from '../data/temple';
 
 export default function Footer() {
@@ -109,8 +109,51 @@ export default function Footer() {
             </div>
 
             <p className="text-[11px] text-cream/70 leading-normal">
-              * गूगल मैप्स पर 'Sankat Mochan Mandir Dehariya' के रूप में स्थान सत्यापित है।
+              * ग्राम डेहरिया, महाराजगंज, भदोही (उत्तर प्रदेश)
             </p>
+          </div>
+        </div>
+
+        {/* Website Update & Contact Box */}
+        <div className="mt-10 p-5 sm:p-6 bg-white/5 rounded-2xl border border-gold/30 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3.5 text-center md:text-left">
+            <div className="w-12 h-12 rounded-xl bg-saffron/20 border border-gold/40 flex items-center justify-center text-saffron-light flex-shrink-0">
+              <PhoneCall className="w-6 h-6" />
+            </div>
+            <div>
+              <span className="text-xs font-bold text-saffron-light uppercase tracking-wider block">
+                वेबसाइट सहायता एवं अद्यतन
+              </span>
+              <p className="text-sm font-semibold text-white">
+                वेबसाइट में कोई भी जानकारी अपडेट करानी हो तो संपर्क करें:{' '}
+                <span className="text-gold-light font-mono font-bold text-base">
+                  {templeInfo.contact.displayPhone}
+                </span>
+              </p>
+              <p className="text-xs text-cream/70">
+                (कॉल एवं व्हाट्सएप दोनों उपलब्ध)
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2.5 flex-shrink-0 w-full md:w-auto">
+            <a
+              href={templeInfo.contact.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 md:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition-all shadow-sm min-h-[42px]"
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span>व्हाट्सएप</span>
+            </a>
+
+            <a
+              href={`tel:${templeInfo.contact.phone}`}
+              className="flex-1 md:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-saffron hover:bg-saffron-deep text-white text-xs font-bold rounded-xl transition-all shadow-sm min-h-[42px]"
+            >
+              <Phone className="w-4 h-4" />
+              <span>कॉल करें</span>
+            </a>
           </div>
         </div>
 

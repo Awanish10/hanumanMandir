@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import MobileBottomNav from './components/MobileBottomNav';
 import Footer from './components/Footer';
+import ContactFloatingWidget from './components/ContactFloatingWidget';
 
 // Pages
 import Home from './pages/Home';
@@ -73,6 +74,9 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Floating Website Update & Contact Widget */}
+      <ContactFloatingWidget />
 
       {/* Mobile Bottom Navigation (Visible on mobile only) */}
       <MobileBottomNav
