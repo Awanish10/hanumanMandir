@@ -202,29 +202,39 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="p-3 bg-amber-50/70 border border-amber-200 rounded-xl text-xs text-amber-900 leading-relaxed">
-                <span className="font-bold">सत्यापन सूचना: </span>
-                {templeInfo.verifiedStatus.hoursNotice} मंदिर का आधिकारिक इतिहास व अन्य विवरण मंदिर समिति से पुष्टि होने पर अद्यतन किया जाएगा।
+              <div className="p-3 bg-green-50/80 border border-green-200 rounded-xl text-xs text-green-900 leading-relaxed flex items-center gap-2">
+                <span className="font-bold text-green-800">सत्यापित स्थिति: </span>
+                <span>गूगल मैप्स पर 'Sankat Mochan Mandir Dehariya' के रूप में स्थान प्रमाणित है।</span>
               </div>
             </div>
 
             <div className="lg:col-span-4 flex flex-col items-center justify-center gap-3 text-center p-6 bg-cream rounded-2xl border border-gold/30">
               <MapPin className="w-10 h-10 text-saffron-deep animate-bounce" />
-              <h3 className="font-bold text-templeRed text-base">
-                मार्ग दर्शन (Directions)
+              <h3 className="font-bold text-templeRed text-base font-devanagari">
+                संकट मोचन मंदिर देहरिया
               </h3>
               <p className="text-xs text-templeText-muted">
-                गूगल मैप्स पर देहरिया, महाराजगंज, भदोही का मार्ग खोजें
+                सटीक स्थान एवं दिशा-निर्देश (GPS: 25.2698, 82.6088)
               </p>
-              <a
-                href={templeInfo.location.mapsQueryUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-saffron hover:bg-saffron-deep text-white font-bold text-sm rounded-xl shadow-temple-sm transition-colors"
-              >
-                <span>गूगल मैप्स खोलें</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
+              <div className="w-full flex flex-col gap-2">
+                <a
+                  href={templeInfo.location.mapsDirectionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-saffron hover:bg-saffron-deep text-white font-bold text-xs sm:text-sm rounded-xl shadow-temple-sm transition-colors min-h-[44px]"
+                >
+                  <span>दिशा-निर्देश (Directions)</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+                <a
+                  href={templeInfo.location.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 bg-white hover:bg-cream text-templeRed border border-gold/40 font-bold text-xs rounded-xl shadow-temple-sm transition-colors"
+                >
+                  <span>गूगल मैप्स पर देखें</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

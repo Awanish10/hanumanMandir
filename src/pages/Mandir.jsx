@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Navigation, Clock, ShieldCheck, Heart, Sparkles, AlertCircle, FileText } from 'lucide-react';
+import { MapPin, Navigation, Clock, ShieldCheck, Heart, Sparkles, AlertCircle, ExternalLink, CheckCircle } from 'lucide-react';
 import { templeInfo } from '../data/temple';
 
 export default function Mandir() {
@@ -15,56 +15,85 @@ export default function Mandir() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-devanagari text-templeRed tracking-tight">
-            मंदिर परिचय एवं जानकारी
+            {templeInfo.name}
           </h1>
 
           <p className="text-sm sm:text-base text-templeText leading-relaxed">
-            {templeInfo.name}, देहरिया (महाराजगंज, भदोही) के संबंध में आधिकारिक एवं सत्यापित विवरण।
+            {templeInfo.officialPlaceName} — देहरिया, महाराजगंज, भदोही (उत्तर प्रदेश) के पावन स्थल का आधिकारिक विवरण।
           </p>
 
           <div className="w-20 h-1 bg-saffron mx-auto rounded-full mt-2" />
         </div>
 
-        {/* 1. Verified Location Card */}
+        {/* 1. Verified Location & Interactive Map Section */}
         <div className="bg-cream-card rounded-3xl p-6 sm:p-10 border border-gold/40 shadow-temple space-y-6">
-          <div className="flex items-center gap-3 border-b border-gold/20 pb-4">
-            <div className="w-12 h-12 rounded-2xl bg-saffron/20 border border-gold/40 flex items-center justify-center text-templeRed">
-              <MapPin className="w-6 h-6 text-saffron-deep" />
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gold/20 pb-4">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-2xl bg-saffron/20 border border-gold/40 flex items-center justify-center text-templeRed">
+                <MapPin className="w-6 h-6 text-saffron-deep" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <h2 className="text-xl sm:text-2xl font-bold font-devanagari text-templeRed">
+                    सत्यापित मंदिर स्थान (Exact Location)
+                  </h2>
+                  <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-green-100 text-green-800 border border-green-300">
+                    <CheckCircle className="w-3 h-3 text-green-600" />
+                    सत्यापित
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm text-templeText-muted">
+                  गूगल मैप्स: {templeInfo.officialPlaceName}
+                </p>
+              </div>
             </div>
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold font-devanagari text-templeRed">
-                सत्यापित भौगोलिक स्थिति (Location)
-              </h2>
-              <p className="text-xs sm:text-sm text-templeText-muted">
-                उत्तर प्रदेश के भदोही जनपद अंतर्गत ग्राम देहरिया
-              </p>
+
+            <div className="text-xs text-templeText-muted bg-cream px-3 py-1.5 rounded-xl border border-gold/30">
+              <span className="font-bold text-templeRed">निर्देशांक (GPS): </span>
+              {templeInfo.location.coordinates.latitude}, {templeInfo.location.coordinates.longitude}
             </div>
           </div>
 
+          {/* Interactive Google Map Embed */}
+          <div className="w-full h-64 sm:h-80 rounded-2xl overflow-hidden border-2 border-gold/40 shadow-temple-sm bg-cream relative">
+            <iframe
+              title="संकट मोचन मंदिर देहरिया - गूगल मैप्स"
+              src={templeInfo.location.mapsEmbedUrl}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full"
+            />
+          </div>
+
+          {/* Address Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="bg-cream p-4 rounded-2xl border border-gold/30">
+              <span className="text-xs font-semibold text-templeText-muted block">मंदिर का नाम (Temple)</span>
+              <span className="text-base font-bold text-templeRed">संकट मोचन मंदिर</span>
+            </div>
+
             <div className="bg-cream p-4 rounded-2xl border border-gold/30">
               <span className="text-xs font-semibold text-templeText-muted block">ग्राम (Village)</span>
               <span className="text-base font-bold text-templeRed">{templeInfo.location.village}</span>
             </div>
 
             <div className="bg-cream p-4 rounded-2xl border border-gold/30">
-              <span className="text-xs font-semibold text-templeText-muted block">क्षेत्र / डाकघर (Post / Area)</span>
+              <span className="text-xs font-semibold text-templeText-muted block">डाकघर / क्षेत्र (Post)</span>
               <span className="text-base font-bold text-templeRed">{templeInfo.location.postArea}</span>
             </div>
 
             <div className="bg-cream p-4 rounded-2xl border border-gold/30">
-              <span className="text-xs font-semibold text-templeText-muted block">जिला (District)</span>
+              <span className="text-xs font-semibold text-templeText-muted block">जनपद (District)</span>
               <span className="text-base font-bold text-templeRed">{templeInfo.location.district}</span>
             </div>
 
             <div className="bg-cream p-4 rounded-2xl border border-gold/30">
-              <span className="text-xs font-semibold text-templeText-muted block">राज्य (State)</span>
-              <span className="text-base font-bold text-templeRed">{templeInfo.location.state}</span>
-            </div>
-
-            <div className="bg-cream p-4 rounded-2xl border border-gold/30">
-              <span className="text-xs font-semibold text-templeText-muted block">पिन कोड (PIN Code)</span>
-              <span className="text-base font-bold text-templeRed">{templeInfo.location.pincode}</span>
+              <span className="text-xs font-semibold text-templeText-muted block">राज्य व पिन कोड</span>
+              <span className="text-base font-bold text-templeRed">उत्तर प्रदेश – २२१३१४</span>
             </div>
 
             <div className="bg-cream p-4 rounded-2xl border border-gold/30">
@@ -73,24 +102,36 @@ export default function Mandir() {
             </div>
           </div>
 
-          {/* Full Address Banner */}
-          <div className="p-4 bg-white/80 rounded-2xl border border-gold/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          {/* Direct Navigation Action Buttons */}
+          <div className="p-4 bg-white/90 rounded-2xl border border-gold/30 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
             <div>
-              <span className="text-xs font-bold text-saffron-deep block uppercase">पूर्ण पता:</span>
+              <span className="text-xs font-bold text-saffron-deep block uppercase">पूर्ण अधिकृत पता:</span>
               <p className="text-sm sm:text-base font-bold text-templeText">
                 {templeInfo.location.fullAddress}
               </p>
             </div>
 
-            <a
-              href={templeInfo.location.mapsQueryUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-saffron hover:bg-saffron-deep text-white font-bold text-sm rounded-xl shadow-temple-sm transition-colors flex-shrink-0"
-            >
-              <Navigation className="w-4 h-4" />
-              <span>गूगल मैप्स नेविगेशन</span>
-            </a>
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <a
+                href={templeInfo.location.mapsDirectionsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-saffron hover:bg-saffron-deep text-white font-bold text-xs sm:text-sm rounded-xl shadow-temple-sm transition-colors min-h-[44px]"
+              >
+                <Navigation className="w-4 h-4" />
+                <span>दिशा-निर्देश (Directions)</span>
+              </a>
+
+              <a
+                href={templeInfo.location.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 bg-white hover:bg-cream text-templeRed border border-gold/40 font-bold text-xs sm:text-sm rounded-xl shadow-temple-sm transition-colors min-h-[44px]"
+              >
+                <ExternalLink className="w-4 h-4 text-saffron" />
+                <span>गूगल मैप्स पर खोलें</span>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -102,10 +143,10 @@ export default function Mandir() {
             </div>
             <div>
               <h2 className="text-xl sm:text-2xl font-bold font-devanagari text-templeRed">
-                दर्शन एवं आरती समय (Timings)
+                दर्शन एवं आरती समय (Darshan Timings)
               </h2>
               <p className="text-xs sm:text-sm text-templeText-muted">
-                मंदिर समिति द्वारा आधिकारिक पुष्टि स्थिति
+                दैनिक दर्शन व आरती संबंधी अद्यतन
               </p>
             </div>
           </div>
@@ -114,7 +155,7 @@ export default function Mandir() {
             <AlertCircle className="w-5 h-5 text-amber-700 flex-shrink-0 mt-0.5" />
             <div className="space-y-1">
               <h3 className="font-bold text-sm text-amber-900">
-                समय पुष्टि सूचना:
+                दर्शन समय सूचना:
               </h3>
               <p className="text-xs sm:text-sm leading-relaxed">
                 {templeInfo.verifiedStatus.hoursNotice} मंदिर समिति से दैनिक पट खुलने, प्रातः आरती, मध्याह्न विश्राम एवं संध्या आरती का अधिकृत समय प्राप्त होते ही इस खंड में प्रकाशित किया जाएगा।
@@ -131,10 +172,10 @@ export default function Mandir() {
             </div>
             <div>
               <h2 className="text-xl sm:text-2xl font-bold font-devanagari text-templeRed">
-                धार्मिक महत्व एवं संदेश
+                धार्मिक महत्व एवं आध्यात्मिक संदेश
               </h2>
               <p className="text-xs sm:text-sm text-templeText-muted">
-                पवनपुत्र हनुमान जी की भक्ति और लोक कल्याण
+                पवनपुत्र संकट मोचन हनुमान जी की भक्ति और लोक कल्याण
               </p>
             </div>
           </div>
@@ -144,7 +185,7 @@ export default function Mandir() {
           </p>
 
           <p className="text-sm sm:text-base text-templeText leading-relaxed">
-            ग्रामीण संस्कृति में हनुमान मंदिर केवल पूजा स्थल ही नहीं, अपितु पूरे समुदाय के लिए सुरक्षा, उत्साह, भाईचारे और सात्विक ऊर्जा का केंद्र होते हैं। मंगलवार और शनिवार को भक्तजन विशेष रूप से एकत्रित होकर हनुमान चालीसा और सुंदरकांड का पाठ करते हैं।
+            ग्रामीण संस्कृति में संकट मोचन हनुमान मंदिर केवल पूजा स्थल ही नहीं, अपितु पूरे क्षेत्र के लिए सुरक्षा, उत्साह, भाईचारे और सात्विक ऊर्जा का केंद्र है। मंगलवार और शनिवार को भक्तजन विशेष रूप से एकत्रित होकर हनुमान चालीसा, आरती और सुंदरकांड का पाठ करते हैं।
           </p>
         </div>
 
@@ -152,10 +193,10 @@ export default function Mandir() {
         <div className="bg-cream/60 rounded-3xl p-6 border border-gold/30 text-xs sm:text-sm text-templeText-muted space-y-2">
           <div className="flex items-center gap-2 font-bold text-templeRed">
             <ShieldCheck className="w-4 h-4 text-saffron" />
-            <span>सत्यता एवं गोपनीयता नीति:</span>
+            <span>सत्यता एवं प्रामाणिकता:</span>
           </div>
           <p className="leading-relaxed">
-            यह वेबसाइट केवल प्रामाणिक और सत्यापित जानकारी प्रस्तुत करती है। मंदिर के पुजारी का नाम, फोन नंबर, निर्माण वर्ष अथवा इतिहास की किसी भी अपुष्ट जानकारी का कृत्रिम रूप से निर्माण नहीं किया गया है। समस्त विवरण मंदिर की स्थानीय समिति की सहमति के उपरांत ही अद्यतन (update) किया जाएगा।
+            यह वेबसाइट केवल प्रामाणिक और सत्यापित जानकारी प्रस्तुत करती है। मंदिर की भौगोलिक स्थिति गूगल मैप्स पर 'Sankat Mochan Mandir Dehariya' के रूप में सत्यापित है। अन्य विवरण मंदिर समिति से पुष्टि होने पर अद्यतन किए जाएंगे।
           </p>
         </div>
 

@@ -86,18 +86,28 @@ export default function Footer() {
               </div>
             </div>
 
-            <a
-              href={templeInfo.location.mapsQueryUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-saffron hover:bg-saffron-deep text-white text-xs font-semibold rounded-xl transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-gold"
-            >
-              <MapPin className="w-4 h-4" />
-              <span>गूगल मैप्स पर मार्ग देखें</span>
-            </a>
+            <div className="flex items-center gap-2 pt-1">
+              <a
+                href={templeInfo.location.mapsDirectionsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-saffron hover:bg-saffron-deep text-white text-xs font-semibold rounded-xl transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-gold"
+              >
+                <MapPin className="w-4 h-4" />
+                <span>दिशा-निर्देश (Directions)</span>
+              </a>
+              <a
+                href={templeInfo.location.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-2 bg-white/10 hover:bg-white/20 text-cream text-xs font-semibold rounded-xl transition-all"
+              >
+                <span>गूगल मैप्स</span>
+              </a>
+            </div>
 
-            <p className="text-[11px] text-cream/60 leading-normal">
-              * यह मानचित्र लिंक गांव एवं डाकघर पते के आधार पर है। आधिकारिक मंदिर समिति द्वारा पुष्टि उपरांत विस्तृत विवरण जोड़ा जाएगा।
+            <p className="text-[11px] text-cream/70 leading-normal">
+              * गूगल मैप्स पर 'Sankat Mochan Mandir Dehariya' के रूप में स्थान सत्यापित है।
             </p>
           </div>
         </div>
