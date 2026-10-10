@@ -1,6 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, Flame, ScrollText, ArrowRight, MapPin, Quote, Shield, HeartHandshake, Compass, Sparkles } from 'lucide-react';
+import { 
+  BookOpen, 
+  Flame, 
+  ScrollText, 
+  ArrowRight, 
+  MapPin, 
+  Quote, 
+  Shield, 
+  HeartHandshake, 
+  Compass, 
+  Sparkles,
+  Bell,
+  Clock,
+  QrCode
+} from 'lucide-react';
 import Hero from '../components/Hero';
 import DevotionalCard from '../components/DevotionalCard';
 import StoryCard from '../components/StoryCard';
@@ -17,7 +31,63 @@ export default function Home() {
       {/* 1. Hero Section */}
       <Hero />
 
-      {/* 2. Main Devotional Cards */}
+      {/* 2. Announcement & Confirmed Aarti Timings Banner */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-gradient-to-r from-saffron/15 via-white to-saffron/15 rounded-3xl p-5 sm:p-7 border-2 border-gold/50 shadow-temple-sm">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+            
+            {/* Pran Pratishtha Info */}
+            <div className="md:col-span-7 flex items-start gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-saffron to-templeRed flex items-center justify-center text-white shadow-md flex-shrink-0">
+                <Bell className="w-6 h-6 animate-pulse" />
+              </div>
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-[11px] font-bold text-templeRed bg-saffron/20 px-2 py-0.5 rounded-full border border-saffron/30">
+                    🔔 {templeInfo.announcement.badge}
+                  </span>
+                  <span className="text-xs font-bold text-saffron-deep">
+                    {templeInfo.announcement.date}
+                  </span>
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold font-devanagari text-templeRed">
+                  {templeInfo.announcement.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-templeText leading-relaxed">
+                  {templeInfo.announcement.description}
+                </p>
+              </div>
+            </div>
+
+            {/* Daily Aarti Timings Quick Badge */}
+            <div className="md:col-span-5 bg-cream p-4 rounded-2xl border border-gold/30 flex items-center justify-between gap-3">
+              <div className="flex items-center gap-3">
+                <Clock className="w-5 h-5 text-saffron-deep flex-shrink-0" />
+                <div>
+                  <span className="text-[11px] font-bold text-templeText-muted block uppercase">
+                    दैनिक दर्शन व आरती
+                  </span>
+                  <div className="text-xs sm:text-sm font-bold text-templeRed flex items-center gap-2 flex-wrap">
+                    <span>प्रातः: {templeInfo.timings.morningAarti}</span>
+                    <span className="text-gold">|</span>
+                    <span>सायं: {templeInfo.timings.eveningAarti}</span>
+                  </div>
+                </div>
+              </div>
+              
+              <Link
+                to="/mandir"
+                className="text-xs font-bold text-saffron-deep hover:underline flex-shrink-0"
+              >
+                विवरण देखें →
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Main Devotional Cards */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
           <span className="text-xs sm:text-sm font-bold text-saffron-deep tracking-wider uppercase">
@@ -56,7 +126,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Daily Devotional Quote (दैनिक दोहा) */}
+      {/* 4. Daily Devotional Quote (दैनिक दोहा) */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative bg-gradient-to-r from-cream-dark/60 via-cream-card to-cream-dark/60 rounded-3xl p-6 sm:p-10 border-2 border-gold/40 shadow-temple text-center">
           <div className="w-12 h-12 rounded-full bg-saffron/20 border border-gold/40 flex items-center justify-center mx-auto mb-4 text-templeRed">
@@ -82,7 +152,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Temple Purpose & Spiritual Values */}
+      {/* 5. Temple Purpose & Spiritual Values */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-cream-card rounded-3xl border border-gold/40 p-6 sm:p-10 lg:p-12 shadow-temple">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -146,7 +216,68 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Featured Stories Section */}
+      {/* 6. Donation / Sahyog Spotlight Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-gradient-to-r from-cream-card via-white to-cream-card rounded-3xl p-6 sm:p-10 border-2 border-gold/50 shadow-temple">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div className="lg:col-span-8 space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-saffron/15 text-templeRed text-xs font-bold border border-saffron/30">
+                <HeartHandshake className="w-3.5 h-3.5 text-saffron" />
+                <span>॥ मंदिर में दान एवं पावन सहयोग ॥</span>
+              </div>
+
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-devanagari text-templeRed">
+                {templeInfo.donation.title}
+              </h2>
+
+              <p className="text-sm sm:text-base text-templeText leading-relaxed">
+                {templeInfo.donation.description} आपका प्रत्येक सहयोग मंदिर के नित्य पूजा-पाठ, भंडारा, स्वच्छता एवं जीर्णोद्धार कार्यों में समर्पित होगा।
+              </p>
+
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <Link
+                  to="/donation"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-saffron hover:bg-saffron-deep text-white font-bold text-sm rounded-xl shadow-temple transition-all active:scale-95 min-h-[46px]"
+                >
+                  <QrCode className="w-4 h-4" />
+                  <span>PhonePe UPI QR कोड देखें एवं दान करें</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+
+                <span className="text-xs text-templeText-muted">
+                  * PhonePe, Google Pay, Paytm, BHIM द्वारा सुरक्षित
+                </span>
+              </div>
+            </div>
+
+            {/* QR Preview Widget */}
+            <div className="lg:col-span-4 flex justify-center">
+              <Link
+                to="/donation"
+                className="bg-cream p-4 rounded-2xl border border-gold/40 shadow-sm flex flex-col items-center text-center hover:shadow-temple transition-all group max-w-[220px]"
+              >
+                <div className="w-36 h-36 bg-white rounded-xl p-2 border border-gold/30 shadow-sm overflow-hidden flex items-center justify-center">
+                  <img
+                    src={templeInfo.donation.qrImage}
+                    alt="दान क्यूआर कोड"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform"
+                  />
+                </div>
+                <span className="text-xs font-bold text-templeRed mt-2 group-hover:text-saffron-deep transition-colors">
+                  क्यूआर कोड से दान करें →
+                </span>
+                <span className="text-[10px] text-templeText-muted">
+                  (क्लिक करके पूर्ण विवरण देखें)
+                </span>
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Featured Stories Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-8 sm:mb-10 gap-4">
           <div>
@@ -175,7 +306,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. Temple Location & Verification Notice Section */}
+      {/* 8. Temple Location & Verification Notice Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-gradient-to-r from-cream-card via-white to-cream-card rounded-3xl p-6 sm:p-10 border border-gold/40 shadow-temple">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">

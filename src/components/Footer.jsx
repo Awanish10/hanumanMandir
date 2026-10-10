@@ -13,6 +13,7 @@ export default function Footer() {
     { name: 'हनुमान जी की कथाएँ', path: '/hanuman-katha' },
     { name: 'फोटो गैलरी', path: '/gallery' },
     { name: 'मंदिर की जानकारी', path: '/mandir' },
+    { name: 'मंदिर में दान एवं सहयोग', path: '/donation' },
     { name: 'भक्ति, दोहे एवं विचार', path: '/bhakti' },
   ];
 

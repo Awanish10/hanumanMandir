@@ -1,5 +1,20 @@
 import React from 'react';
-import { MapPin, Navigation, Clock, ShieldCheck, Heart, Sparkles, AlertCircle, ExternalLink, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { 
+  MapPin, 
+  Navigation, 
+  Clock, 
+  ShieldCheck, 
+  Heart, 
+  Sparkles, 
+  ExternalLink, 
+  CheckCircle,
+  Calendar,
+  Flame,
+  HeartHandshake,
+  ArrowRight,
+  Bell
+} from 'lucide-react';
 import { templeInfo } from '../data/temple';
 
 export default function Mandir() {
@@ -19,13 +34,51 @@ export default function Mandir() {
           </h1>
 
           <p className="text-sm sm:text-base text-templeText leading-relaxed">
-            {templeInfo.officialPlaceName} — देहरिया, महाराजगंज, भदोही (उत्तर प्रदेश) के पावन स्थल का आधिकारिक विवरण।
+            {templeInfo.officialPlaceName} — देहरिया, महाराजगंज, भदोही (उत्तर प्रदेश) के पावन स्थल का आधिकारिक एवं प्रामाणिक विवरण।
           </p>
 
           <div className="w-20 h-1 bg-saffron mx-auto rounded-full mt-2" />
         </div>
 
-        {/* 1. Verified Location & Interactive Map Section */}
+        {/* 1. Auspicious Pran Pratishtha Announcement Banner */}
+        {templeInfo.announcement && (
+          <div className="bg-gradient-to-r from-saffron/20 via-cream-card to-saffron/20 rounded-3xl p-6 sm:p-8 border-2 border-gold/60 shadow-temple relative overflow-hidden">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-saffron to-templeRed flex items-center justify-center text-white shadow-md flex-shrink-0 mt-0.5">
+                  <Bell className="w-6 h-6 animate-pulse" />
+                </div>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="text-xs font-bold uppercase tracking-wider text-templeRed bg-white/80 px-2.5 py-0.5 rounded-full border border-gold/40">
+                      🔔 {templeInfo.announcement.badge}
+                    </span>
+                    <span className="text-xs font-bold text-saffron-deep">
+                      {templeInfo.announcement.date}
+                    </span>
+                  </div>
+                  <h2 className="text-xl sm:text-2xl font-bold font-devanagari text-templeRed">
+                    {templeInfo.announcement.title}
+                  </h2>
+                  <p className="text-sm text-templeText leading-relaxed">
+                    {templeInfo.announcement.description}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex-shrink-0 text-center sm:text-right w-full sm:w-auto">
+                <span className="text-xs font-bold text-templeRed block">
+                  {templeInfo.announcement.chant}
+                </span>
+                <span className="text-[11px] text-templeText-muted">
+                  संकट मोचन मंदिर परिवार
+                </span>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* 2. Verified Location & Interactive Map Section */}
         <div className="bg-cream-card rounded-3xl p-6 sm:p-10 border border-gold/40 shadow-temple space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gold/20 pb-4">
             <div className="flex items-center gap-3">
@@ -135,36 +188,122 @@ export default function Mandir() {
           </div>
         </div>
 
-        {/* 2. Darshan & Timings Information */}
+        {/* 3. Darshan & Aarti Timings Information */}
+        <div className="bg-cream-card rounded-3xl p-6 sm:p-10 border border-gold/40 shadow-temple space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gold/20 pb-4">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-2xl bg-templeRed/15 border border-gold/40 flex items-center justify-center text-templeRed">
+                <Clock className="w-6 h-6 text-templeRed" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <h2 className="text-xl sm:text-2xl font-bold font-devanagari text-templeRed">
+                    दर्शन एवं आरती समय (Darshan & Aarti Timings)
+                  </h2>
+                  <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-green-100 text-green-800 border border-green-300">
+                    <CheckCircle className="w-3 h-3 text-green-600" />
+                    पुष्ट समय
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm text-templeText-muted">
+                  आधिकारिक गूगल साइट से सत्यापित दैनिक दर्शन व आरती
+                </p>
+              </div>
+            </div>
+
+            <span className="text-xs font-semibold text-saffron-deep bg-saffron/10 px-3 py-1.5 rounded-xl border border-saffron/30 self-start sm:self-auto">
+              दैनिक नित्य आरती
+            </span>
+          </div>
+
+          {/* Timings Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="p-5 bg-gradient-to-br from-amber-50 to-orange-50/50 rounded-2xl border-2 border-amber-200 text-amber-950 flex items-center gap-4 shadow-sm">
+              <div className="w-12 h-12 rounded-xl bg-amber-500/20 flex items-center justify-center text-amber-800 flex-shrink-0">
+                <Flame className="w-6 h-6 text-amber-700" />
+              </div>
+              <div>
+                <span className="text-xs font-bold text-amber-800 uppercase tracking-wide block">
+                  🌅 प्रातः आरती (Morning Aarti)
+                </span>
+                <span className="text-xl sm:text-2xl font-extrabold text-templeRed font-devanagari">
+                  {templeInfo.timings.morningAarti}
+                </span>
+                <p className="text-[11px] text-amber-900/80 mt-0.5">
+                  प्रातः कालीन मंगला आरती व दर्शन
+                </p>
+              </div>
+            </div>
+
+            <div className="p-5 bg-gradient-to-br from-amber-50 to-orange-50/50 rounded-2xl border-2 border-amber-200 text-amber-950 flex items-center gap-4 shadow-sm">
+              <div className="w-12 h-12 rounded-xl bg-templeRed/15 flex items-center justify-center text-templeRed flex-shrink-0">
+                <Flame className="w-6 h-6 text-templeRed" />
+              </div>
+              <div>
+                <span className="text-xs font-bold text-templeRed uppercase tracking-wide block">
+                  🌆 सायं आरती (Evening Aarti)
+                </span>
+                <span className="text-xl sm:text-2xl font-extrabold text-templeRed font-devanagari">
+                  {templeInfo.timings.eveningAarti}
+                </span>
+                <p className="text-[11px] text-amber-900/80 mt-0.5">
+                  संध्या कालीन महाआरती व संकीर्तन
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-xs text-templeText-muted leading-relaxed">
+            * {templeInfo.timings.description} {templeInfo.timings.note}
+          </p>
+        </div>
+
+        {/* 4. Religious Festivals & Programs (धार्मिक त्योहार एवं कार्यक्रम) */}
         <div className="bg-cream-card rounded-3xl p-6 sm:p-10 border border-gold/40 shadow-temple space-y-6">
           <div className="flex items-center gap-3 border-b border-gold/20 pb-4">
-            <div className="w-12 h-12 rounded-2xl bg-templeRed/15 border border-gold/40 flex items-center justify-center text-templeRed">
-              <Clock className="w-6 h-6 text-templeRed" />
+            <div className="w-12 h-12 rounded-2xl bg-saffron/20 border border-gold/40 flex items-center justify-center text-templeRed">
+              <Calendar className="w-6 h-6 text-saffron-deep" />
             </div>
             <div>
               <h2 className="text-xl sm:text-2xl font-bold font-devanagari text-templeRed">
-                दर्शन एवं आरती समय (Darshan Timings)
+                धार्मिक त्योहार एवं कार्यक्रम (Festivals & Programs)
               </h2>
               <p className="text-xs sm:text-sm text-templeText-muted">
-                दैनिक दर्शन व आरती संबंधी अद्यतन
+                मंदिर में आयोजित होने वाले विशेष पावन पर्व एवं अनुष्ठान
               </p>
             </div>
           </div>
 
-          <div className="p-5 bg-amber-50/80 rounded-2xl border border-amber-200 text-amber-950 flex items-start gap-3">
-            <AlertCircle className="w-5 h-5 text-amber-700 flex-shrink-0 mt-0.5" />
-            <div className="space-y-1">
-              <h3 className="font-bold text-sm text-amber-900">
-                दर्शन समय सूचना:
-              </h3>
-              <p className="text-xs sm:text-sm leading-relaxed">
-                {templeInfo.verifiedStatus.hoursNotice} मंदिर समिति से दैनिक पट खुलने, प्रातः आरती, मध्याह्न विश्राम एवं संध्या आरती का अधिकृत समय प्राप्त होते ही इस खंड में प्रकाशित किया जाएगा।
-              </p>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {templeInfo.festivals.map((fest) => (
+              <div
+                key={fest.id}
+                className="p-5 bg-cream rounded-2xl border border-gold/30 space-y-2 hover:border-saffron/50 transition-colors"
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-saffron/20 text-templeRed border border-saffron/30">
+                    {fest.badge}
+                  </span>
+                  <span className="text-[11px] text-templeText-muted font-medium">
+                    {fest.timing}
+                  </span>
+                </div>
+                <h3 className="text-base font-bold font-devanagari text-templeRed">
+                  {fest.name}
+                </h3>
+                <p className="text-xs sm:text-sm text-templeText leading-relaxed">
+                  {fest.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="p-3 bg-white/80 rounded-xl border border-gold/25 text-xs text-templeText-muted text-center">
+            📢 कार्यक्रमों की विशेष तिथियों व समय की सूचना समय-समय पर यहाँ अद्यतन की जाती है।
           </div>
         </div>
 
-        {/* 3. Temple Purpose & Spiritual Message */}
+        {/* 5. Temple History & Spiritual Significance */}
         <div className="bg-cream-card rounded-3xl p-6 sm:p-10 border border-gold/40 shadow-temple space-y-6">
           <div className="flex items-center gap-3 border-b border-gold/20 pb-4">
             <div className="w-12 h-12 rounded-2xl bg-gold/20 border border-gold/40 flex items-center justify-center text-gold-dark">
@@ -172,31 +311,71 @@ export default function Mandir() {
             </div>
             <div>
               <h2 className="text-xl sm:text-2xl font-bold font-devanagari text-templeRed">
-                धार्मिक महत्व एवं आध्यात्मिक संदेश
+                मंदिर परिचय एवं आध्यात्मिक संदेश
               </h2>
               <p className="text-xs sm:text-sm text-templeText-muted">
-                पवनपुत्र संकट मोचन हनुमान जी की भक्ति और लोक कल्याण
+                आस्था, भक्ति और लोक कल्याण का पावन केंद्र
               </p>
             </div>
           </div>
 
           <p className="text-sm sm:text-base text-templeText leading-relaxed">
-            {templeInfo.spiritualMessage}
+            {templeInfo.about}
           </p>
 
           <p className="text-sm sm:text-base text-templeText leading-relaxed">
-            ग्रामीण संस्कृति में संकट मोचन हनुमान मंदिर केवल पूजा स्थल ही नहीं, अपितु पूरे क्षेत्र के लिए सुरक्षा, उत्साह, भाईचारे और सात्विक ऊर्जा का केंद्र है। मंगलवार और शनिवार को भक्तजन विशेष रूप से एकत्रित होकर हनुमान चालीसा, आरती और सुंदरकांड का पाठ करते हैं।
+            {templeInfo.spiritualMessage}
           </p>
         </div>
 
-        {/* 4. Transparency Policy */}
+        {/* 6. Donation Call-to-Action Section */}
+        <div className="bg-gradient-to-r from-cream-card via-white to-cream-card rounded-3xl p-6 sm:p-10 border-2 border-gold/50 shadow-temple">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 rounded-2xl bg-saffron/20 border border-gold/40 flex items-center justify-center text-templeRed flex-shrink-0">
+                <HeartHandshake className="w-7 h-7 text-saffron-deep" />
+              </div>
+              <div className="space-y-1">
+                <span className="text-xs font-bold text-saffron-deep uppercase tracking-wider block">
+                  ॥ पावन सहयोग ॥
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold font-devanagari text-templeRed">
+                  {templeInfo.donation.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-templeText leading-relaxed max-w-xl">
+                  {templeInfo.donation.description}
+                </p>
+              </div>
+            </div>
+
+            <Link
+              to="/donation"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-saffron hover:bg-saffron-deep text-white font-bold text-sm rounded-2xl shadow-temple transition-all active:scale-95 flex-shrink-0 w-full sm:w-auto min-h-[48px]"
+            >
+              <span>दान व PhonePe QR देखें</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+
+        {/* 7. Transparency Policy */}
         <div className="bg-cream/60 rounded-3xl p-6 border border-gold/30 text-xs sm:text-sm text-templeText-muted space-y-2">
           <div className="flex items-center gap-2 font-bold text-templeRed">
-            <ShieldCheck className="w-4 h-4 text-saffron" />
+            <ShieldCheck className="w-4 h-4 text-green-700" />
             <span>सत्यता एवं प्रामाणिकता:</span>
           </div>
           <p className="leading-relaxed">
-            यह वेबसाइट केवल प्रामाणिक और सत्यापित जानकारी प्रस्तुत करती है। मंदिर की भौगोलिक स्थिति गूगल मैप्स पर 'Sankat Mochan Mandir Dehariya' के रूप में सत्यापित है। अन्य विवरण मंदिर समिति से पुष्टि होने पर अद्यतन किए जाएंगे।
+            यह वेबसाइट केवल आधिकारिक गूगल साइट{' '}
+            <a
+              href={templeInfo.location.officialGoogleSite}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-saffron-deep font-semibold underline inline-flex items-center gap-1"
+            >
+              <span>({templeInfo.location.officialGoogleSite})</span>
+              <ExternalLink className="w-3 h-3 inline" />
+            </a>{' '}
+            तथा गूगल मैप्स पर 'Sankat Mochan Mandir Dehariya' के सत्यापित विवरण प्रस्तुत करती है।
           </p>
         </div>
 

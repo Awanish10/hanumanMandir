@@ -12,6 +12,7 @@ import HanumanKatha from './pages/HanumanKatha';
 import StoryDetail from './pages/StoryDetail';
 import Gallery from './pages/Gallery';
 import Mandir from './pages/Mandir';
+import Donation from './pages/Donation';
 import Bhakti from './pages/Bhakti';
 import NotFound from './pages/NotFound';
 
@@ -56,9 +57,10 @@ export default function App() {
           <Route path="/hanuman-katha" element={<HanumanKatha />} />
           <Route path="/hanuman-katha/:slug" element={<StoryDetail />} />
 
-          {/* Gallery, Mandir Info, Bhakti */}
+          {/* Gallery, Mandir Info, Donation, Bhakti */}
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/mandir" element={<Mandir />} />
+          <Route path="/donation" element={<Donation />} />
           <Route path="/bhakti" element={<Bhakti />} />
 
           {/* Custom 404 Fallback */}

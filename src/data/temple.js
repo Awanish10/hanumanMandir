@@ -1,59 +1,110 @@
 /**
  * Configurable Temple Information File
- * Verified location confirmed via Google Maps: Sankat Mochan Mandir Dehariya
+ * Sourced & Verified via official Google Site & Google Maps:
+ * - Google Site: https://sites.google.com/view/sankatmochanmandirdehariya
+ * - Google Maps: Sankat Mochan Mandir Dehariya (25.2698282, 82.6088332)
  */
 
 export const templeInfo = {
-  // Official / Display Name (Confirmed via verified Google Maps entry: Sankat Mochan Mandir Dehariya)
+  // Official / Display Name
   name: "श्री संकट मोचन हनुमान मंदिर",
-  officialPlaceName: "संकट मोचन मंदिर देहरिया (Sankat Mochan Mandir Dehariya)",
+  officialPlaceName: "संकट मोचन मंदिर डेहरिया (Sankat Mochan Mandir Dehariya)",
   subTitle: "श्री हनुमान जी की भक्ति, शक्ति और कृपा को समर्पित पावन धाम",
   tagline: "॥ जय श्री राम ॥ जय संकट मोचन हनुमान ॥",
 
-  // Location Details (Verified on Google Maps)
+  // Location Details (Verified via Google Maps & Google Site)
   location: {
-    village: "देहरिया (Dehariya)",
+    village: "देहरिया / डेहरिया (Dehariya)",
     postArea: "महाराजगंज (Maharajganj)",
     district: "भदोही (Bhadohi)",
     state: "उत्तर प्रदेश (Uttar Pradesh)",
     pincode: "221314",
     country: "भारत (India)",
-    fullAddress: "संकट मोचन मंदिर, ग्राम देहरिया, डाकघर महाराजगंज, जनपद भदोही, उत्तर प्रदेश – 221314",
+    fullAddress: "संकट मोचन मंदिर, ग्राम डेहरिया, डाकघर महाराजगंज, जनपद भदोही, उत्तर प्रदेश – 221314",
     
-    // Coordinates
     coordinates: {
       latitude: 25.2698282,
       longitude: 82.6088332,
     },
 
-    // Verified Google Maps Place URL
     mapsUrl: "https://www.google.com/maps/place/Sankat+Mochan+Mandir+Dehariya/@25.2692337,82.6097257,18.51z/data=!4m14!1m7!3m6!1s0x398fc3002ed77aab:0xdf131ca6323df91a!2sMaharajganj+bhadohi!8m2!3d25.2572537!4d82.6259483!16s%2Fg%2F11wqdmqhkw!3m5!1s0x398fc30034ac2a23:0x17b07eaaffe31281!8m2!3d25.2698282!4d82.6088332!16s%2Fg%2F11zgf7f_sf",
-    
-    // Direct Google Maps Directions link
     mapsDirectionsUrl: "https://www.google.com/maps/dir/?api=1&destination=25.2698282,82.6088332",
-    
-    // Embed map source URL for interactive map preview
     mapsEmbedUrl: "https://maps.google.com/maps?q=25.2698282,82.6088332&hl=hi&z=17&output=embed",
-    
-    // Fallback search link
-    mapsQueryUrl: "https://www.google.com/maps/place/Sankat+Mochan+Mandir+Dehariya/@25.2698282,82.6088332,18.51z",
+    officialGoogleSite: "https://sites.google.com/view/sankatmochanmandirdehariya",
   },
 
-  // Purpose and Spiritual Message
-  spiritualMessage: "पवनपुत्र संकट मोचन श्री हनुमान जी बल, बुद्धि, विद्या और भक्ति के प्रतीक हैं। ग्राम देहरिया स्थित यह पावन धाम सभी भक्तों के संकटों को हरने और जीवन में शांति, संबल एवं धर्म का मार्ग प्रशस्त करने हेतु समर्पित है।",
+  // About Temple (Official text from Google Site)
+  about: "संकट मोचन मंदिर डेहरिया (Sankat Mochan Mandir Dehariya) भगवान हनुमान जी को समर्पित एक पवित्र मंदिर है। यह मंदिर ग्रामवासियों और आसपास के क्षेत्रों के श्रद्धालुओं के लिए आस्था, भक्ति और शांति का महत्वपूर्ण केंद्र है। श्रद्धालु यहाँ भगवान हनुमान जी के दर्शन एवं पूजा-अर्चना के लिए आते हैं और सुख-शांति एवं समृद्धि की प्रार्थना करते हैं। मंदिर में नियमित रूप से पूजा एवं आरती होती है तथा विशेष अवसरों और धार्मिक त्योहारों पर कार्यक्रम आयोजित किए जाते हैं।",
 
-  // Darshan & Temple Management Status
+  // Important Announcements (Google Site official announcement)
+  announcement: {
+    badge: "महत्वपूर्ण सूचना",
+    title: "पावन प्राण प्रतिष्ठा समारोह",
+    date: "20 जनवरी",
+    description: "श्री संकट मोचन मंदिर में प्राण प्रतिष्ठा के इस पावन अवसर पर आप सभी श्रद्धालु सादर आमंत्रित हैं।",
+    chant: "॥ जय श्री राम ॥",
+  },
+
+  // Darshan & Aarti Timings (Official confirmed timings from Google Site)
+  timings: {
+    isConfirmed: true,
+    morningAarti: "सुबह 06:00 बजे",
+    eveningAarti: "शाम 06:00 बजे",
+    description: "प्रतिदिन प्रातः आरती सुबह 6:00 बजे एवं सायं आरती शाम 6:00 बजे श्रद्धा भाव से संपन्न होती है।",
+    note: "पर्व-त्योहारों एवं विशेष अनुष्ठानों के अवसर पर समय में आंशिक परिवर्तन संभव है।",
+  },
+
+  // Spiritual Purpose
+  spiritualMessage: "पवनपुत्र संकट मोचन श्री हनुमान जी बल, बुद्धि, विद्या और भक्ति के प्रतीक हैं। ग्राम डेहरिया स्थित यह पावन धाम सभी भक्तों के संकटों को हरने और जीवन में शांति, संबल एवं धर्म का मार्ग प्रशस्त करने हेतु समर्पित है। श्रद्धा रखें, सेवा करें और सदैव सकारात्मक रहें।",
+
+  // Festivals & Regular Programs (Verified from official Google Site)
+  festivals: [
+    {
+      id: "weekly-puja",
+      name: "प्रत्येक मंगलवार एवं शनिवार विशेष पूजा",
+      description: "प्रत्येक मंगलवार एवं शनिवार को संकट मोचन हनुमान जी की विशेष पूजा, सुंदरकांड पाठ एवं मंगल आरती का आयोजन किया जाता है।",
+      badge: "नियमित सेवा",
+      timing: "साप्ताहिक",
+    },
+    {
+      id: "hanuman-jayanti",
+      name: "श्री हनुमान जन्मोत्सव (हनुमान जयंती)",
+      description: "भगवान हनुमान जी के जन्मोत्सव के पावन अवसर पर भव्य श्रृंगार, विशेष पूजा, अखंड आरती, संकीर्तन, भजन एवं विशाल धार्मिक भंडारे का आयोजन होता है।",
+      badge: "महापर्व",
+      timing: "चैत्र पूर्णिमा",
+    },
+    {
+      id: "navratri",
+      name: "नवरात्रि अनुष्ठान",
+      description: "चैत्र एवं शारदीय नवरात्रि के दौरान नौ दिनों तक विशेष पूजा-अर्चना, दुर्गा सप्तशती एवं धार्मिक अनुष्ठान संपन्न होते हैं।",
+      badge: "धार्मिक पर्व",
+      timing: "द्विवार्षिक",
+    },
+    {
+      id: "annual-festival",
+      name: "वार्षिक मंदिर उत्सव",
+      description: "मंदिर के वार्षिक उत्सव के अवसर पर विशेष पूजा, सामूहिक आरती एवं ग्रामवासियों के सहयोग से सांस्कृतिक व धार्मिक कार्यक्रम आयोजित किए जाते हैं।",
+      badge: "वार्षिक उत्सव",
+      timing: "प्रतिवर्ष",
+    },
+  ],
+
+  // Donation / Sahyog (Verified from official Google Site)
+  donation: {
+    title: "मंदिर में दान एवं सहयोग",
+    subTitle: "श्री संकट मोचन मंदिर डेहरिया",
+    description: "मंदिर के धार्मिक कार्यों, पूजा-पाठ, जीर्णोद्धार एवं सेवा कार्यों में सहयोग देने के लिए आप अपनी श्रद्धानुसार दान कर सकते हैं।",
+    qrImage: "/assets/images/temple-donation-qr.png",
+    qrInstructions: "PhonePe, Google Pay, Paytm, BHIM या किसी भी UPI ऐप से यह आधिकारिक क्यूआर कोड स्कैन करके श्रद्धानुसार दान करें।",
+    note: "आपका सहयोग मंदिर की सेवा एवं धार्मिक कार्यों में सहायक होगा।",
+    blessing: "॥ जय श्री राम ॥ जय संकट मोचन हनुमान ॥",
+  },
+
+  // Verified Status
   verifiedStatus: {
     isLocationVerified: true,
-    locationVerifiedNotice: "गूगल मैप्स पर सटीक स्थिति (Sankat Mochan Mandir Dehariya - 25.2698282, 82.6088332) सत्यापित है।",
-    isHoursConfirmed: false,
-    hoursNotice: "दैनिक दर्शन एवं आरती का निश्चित समय मंदिर समिति द्वारा पुष्टि होने पर यहाँ अद्यतन किया जाएगा।",
-    contactNotice: "आधिकारिक संपर्क सूत्र एवं व्यवस्थापक विवरण पुष्टि के उपरांत यहाँ प्रकाशित किए जाएंगे।",
-    historyNotice: "इस पावन मंदिर का अधिकृत इतिहास एवं परम्परा का विवरण मंदिर समिति की अधिकृत जानकारी के पश्चात प्रस्तुत किया जाएगा।",
+    locationVerifiedNotice: "गूगल मैप्स एवं आधिकारिक गूगल साइट पर सत्यापित।",
+    isHoursConfirmed: true,
+    hoursNotice: "प्रातः आरती: सुबह 6:00 बजे | सायं आरती: शाम 6:00 बजे (आधिकारिक गूगल साइट से पुष्ट)।",
   },
-
-  // Editorial Placeholders (Clearly labeled for future configuration)
-  timings: null,
-  contactNumber: null,
-  priestName: null,
 };

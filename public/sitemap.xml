@@ -71,6 +71,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://nimble-tuba-4phm9vi.vercel.app/donation</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://nimble-tuba-4phm9vi.vercel.app/bhakti</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
