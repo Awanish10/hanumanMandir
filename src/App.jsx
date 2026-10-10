@@ -16,6 +16,7 @@ import Gallery from './pages/Gallery';
 import Mandir from './pages/Mandir';
 import Donation from './pages/Donation';
 import Bhakti from './pages/Bhakti';
+import SanjeevaniAdventure from './pages/SanjeevaniAdventure';
 import NotFound from './pages/NotFound';
 
 /**
@@ -66,6 +67,7 @@ export default function App() {
           <Route path="/mandir" element={<Mandir />} />
           <Route path="/donation" element={<Donation />} />
           <Route path="/bhakti" element={<Bhakti />} />
+          <Route path="/sanjeevani-adventure" element={<SanjeevaniAdventure />} />
 
           {/* Custom 404 Fallback */}
           <Route path="*" element={<NotFound />} />
