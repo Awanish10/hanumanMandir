@@ -102,11 +102,11 @@ export const templeInfo = {
 
   // Website Update & Contact Support
   contact: {
-    phone: "87268385848",
-    formattedPhone: "+91 87268385848",
-    displayPhone: "87268385848",
-    whatsappUrl: "https://wa.me/9187268385848?text=%E0%A5%A5%20%E0%A4%9C%E0%A4%AF%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A5%A5%0A%E0%A4%B5%E0%A5%87%E0%A4%AC%E0%A4%B8%E0%A4%BE%E0%A4%87%E0%A4%9F%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%85%E0%A4%AA%E0%A4%A1%E0%A5%87%E0%A4%9F%20%2F%20%E0%A4%B8%E0%A5%81%E0%A4%9D%E0%A4%BE%E0%A4%B5%20%E0%A4%B9%E0%A5%87%E0%A4%A4%E0%A4%81%20%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95%E0%A5%A4",
-    notice: "वेबसाइट में कोई भी जानकारी अपडेट करानी हो तो 87268385848 नंबर पर संपर्क करें। कॉल एवं व्हाट्सएप दोनों उपलब्ध हैं।",
+    phone: "8726385848",
+    formattedPhone: "+91 8726385848",
+    displayPhone: "8726385848",
+    whatsappUrl: "https://wa.me/918726385848?text=%E0%A5%A5%20%E0%A4%9C%E0%A4%AF%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A5%A5%0A%E0%A4%B5%E0%A5%87%E0%A4%AC%E0%A4%B8%E0%A4%BE%E0%A4%87%E0%A4%9F%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%85%E0%A4%AA%E0%A4%A1%E0%A5%87%E0%A4%9F%20%2F%20%E0%A4%B8%E0%A5%81%E0%A4%9D%E0%A4%BE%E0%A4%B5%20%E0%A4%B9%E0%A5%87%E0%A4%A4%E0%A4%81%20%E0%A4%B8%E0%A4%82%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%95%E0%A5%A4",
+    notice: "वेबसाइट में कोई भी जानकारी अपडेट करानी हो तो 8726385848 नंबर पर संपर्क करें। कॉल एवं व्हाट्सएप दोनों उपलब्ध हैं।",
   },
 
   // Verified Status
