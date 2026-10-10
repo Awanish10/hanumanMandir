@@ -6,13 +6,13 @@ export default function StoryCard({ story }) {
   const [imgError, setImgError] = useState(false);
 
   return (
-    <article className="group flex flex-col bg-cream-card rounded-3xl overflow-hidden border border-gold/40 shadow-temple hover:shadow-temple-hover transition-all duration-300 hover:-translate-y-1">
+    <Link
+      to={`/hanuman-katha/${story.slug}`}
+      className="group flex flex-col bg-cream-card rounded-3xl overflow-hidden border border-gold/40 shadow-temple hover:shadow-temple-hover transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-saffron text-left cursor-pointer"
+      aria-label={`${story.title} - संपूर्ण कथा पढ़ें`}
+    >
       {/* Thumbnail */}
-      <Link
-        to={`/hanuman-katha/${story.slug}`}
-        className="relative block w-full aspect-[16/10] bg-gradient-to-br from-amber-100 to-amber-200 overflow-hidden"
-        aria-label={`${story.title} - संपूर्ण कथा पढ़ें`}
-      >
+      <div className="relative block w-full aspect-[16/10] bg-gradient-to-br from-amber-100 to-amber-200 overflow-hidden">
         {!imgError ? (
           <img
             src={story.image}
@@ -33,7 +33,7 @@ export default function StoryCard({ story }) {
           <Clock className="w-3.5 h-3.5 text-saffron-deep" />
           <span>{story.readTime}</span>
         </div>
-      </Link>
+      </div>
 
       {/* Content */}
       <div className="flex-1 p-5 sm:p-6 flex flex-col justify-between">
@@ -43,9 +43,7 @@ export default function StoryCard({ story }) {
           </span>
 
           <h3 className="text-lg sm:text-xl font-bold font-devanagari text-templeRed group-hover:text-saffron-deep transition-colors mb-2 leading-snug">
-            <Link to={`/hanuman-katha/${story.slug}`}>
-              {story.title}
-            </Link>
+            {story.title}
           </h3>
 
           <p className="text-xs sm:text-sm text-templeText leading-relaxed line-clamp-3 mb-4">
@@ -53,12 +51,12 @@ export default function StoryCard({ story }) {
           </p>
         </div>
 
-        {/* Footer Link */}
+        {/* Footer Action */}
         <div className="pt-3 border-t border-gold/20 flex items-center justify-between text-xs sm:text-sm font-bold text-templeRed group-hover:text-saffron-deep">
           <span>पूरी कथा पढ़ें</span>
           <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform text-saffron" />
         </div>
       </div>
-    </article>
+    </Link>
   );
 }
