@@ -12,6 +12,7 @@ export default function Footer() {
     { name: 'संकट मोचन हनुमानाष्टक', path: '/hanumanashtak' },
     { name: 'श्री हनुमान आरती', path: '/aarti' },
     { name: 'हनुमान जी की कथाएँ', path: '/hanuman-katha' },
+    { name: 'संजीवनी एडवेंचर (गेम)', path: '/sanjeevani-adventure' },
     { name: 'फोटो गैलरी', path: '/gallery' },
     { name: 'मंदिर की जानकारी', path: '/mandir' },
     { name: 'मंदिर में दान एवं सहयोग', path: '/donation' },

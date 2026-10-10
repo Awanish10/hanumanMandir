@@ -13,7 +13,8 @@ import {
   Sparkles,
   Bell,
   Clock,
-  QrCode
+  QrCode,
+  Gamepad2
 } from 'lucide-react';
 import Hero from '../components/Hero';
 import DevotionalCard from '../components/DevotionalCard';
@@ -132,6 +133,47 @@ export default function Home() {
             badgeText="पावन चरित्र"
           />
         </div>
+      </section>
+
+      {/* 3.5 Sanjeevani Adventure Interactive Game Banner */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Link
+          to="/sanjeevani-adventure"
+          className="group block relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#2A160E] via-[#3D1E12] to-[#2A160E] border-2 border-gold/50 p-6 sm:p-8 shadow-temple-hover hover:border-gold transition-all duration-300"
+        >
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4 sm:gap-6 text-left">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-b from-saffron/30 to-templeRed/30 border border-gold/40 flex items-center justify-center p-2 flex-shrink-0 group-hover:scale-105 transition-transform shadow-lg">
+                <img
+                  src="/assets/images/story-sanjeevani.svg"
+                  alt="संजीवनी एडवेंचर"
+                  className="w-full h-full object-contain filter drop-shadow"
+                />
+              </div>
+
+              <div>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-saffron/20 border border-saffron/40 text-saffron-light text-xs font-bold uppercase tracking-wider mb-2">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>नया इंटरैक्टिव गेम • New Game</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold font-heading text-amber-200 group-hover:text-gold transition-colors">
+                  संजीवनी एडवेंचर – श्री हनुमान जी की पावन यात्रा
+                </h3>
+                <p className="text-xs sm:text-sm text-cream/80 max-w-xl mt-1 leading-relaxed">
+                  लक्ष्मण जी के प्राणों की रक्षा हेतु द्रोणागिरि पर्वत तक उड़ें, बादलों से बचें और दिव्य संजीवनी बूटियाँ एकत्रित करें।
+                </p>
+              </div>
+            </div>
+
+            <div className="flex-shrink-0 w-full sm:w-auto">
+              <span className="inline-flex items-center justify-center gap-2 w-full sm:w-auto py-3.5 px-6 rounded-2xl bg-gradient-to-r from-saffron to-templeRed text-white font-extrabold text-sm sm:text-base shadow-lg group-hover:brightness-110 active:scale-95 transition-all border border-gold/40">
+                <Gamepad2 className="w-5 h-5" />
+                <span>अभी खेलें (Play Game)</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </div>
+          </div>
+        </Link>
       </section>
 
       {/* 4. Daily Devotional Quote (दैनिक दोहा) */}

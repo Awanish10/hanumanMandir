@@ -16,7 +16,8 @@ import {
   HeartHandshake,
   Shield,
   Phone,
-  MessageCircle
+  MessageCircle,
+  Gamepad2
 } from 'lucide-react';
 import { templeInfo } from '../data/temple';
 
@@ -29,6 +30,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
     { name: 'हनुमानाष्टक', path: '/hanumanashtak', icon: Shield, subtitle: 'संकट मोचन हनुमानाष्टक' },
     { name: 'आरती', path: '/aarti', icon: Flame, subtitle: 'आरती कीजै हनुमान लला की' },
     { name: 'हनुमान जी की कथा', path: '/hanuman-katha', icon: ScrollText, subtitle: '८ पावन चरित्र एवं सीख' },
+    { name: 'संजीवनी गेम', path: '/sanjeevani-adventure', icon: Gamepad2, subtitle: 'हनुमान जी की पावन यात्रा' },
     { name: 'फोटो गैलरी', path: '/gallery', icon: ImageIcon, subtitle: 'दर्शन एवं दिव्य छवियाँ' },
     { name: 'मंदिर की जानकारी', path: '/mandir', icon: MapPin, subtitle: 'स्थान, आरती व पर्व' },
     { name: 'दान एवं सहयोग', path: '/donation', icon: HeartHandshake, subtitle: 'PhonePe QR से सेवा' },
