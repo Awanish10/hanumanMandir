@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: #FFF8E8;
+    color: #3D2418;
+    font-family: 'Noto Sans Devanagari', Mukta, system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom devotional scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF8E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #E6BE68;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F28C28;
+}
+
+/* Safe area support for notched phones */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+}
+
+/* Print-friendly styles for Chalisa and Aarti */
+@media print {
+  header, footer, nav, .no-print, .mobile-bottom-nav {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .print-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 10px !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+}

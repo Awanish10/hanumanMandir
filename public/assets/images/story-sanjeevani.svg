@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="skyDawnNight" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1E3A5F" />
+      <stop offset="50%" stop-color="#14213D" />
+      <stop offset="85%" stop-color="#080F1D" />
+      <stop offset="100%" stop-color="#02050A" />
+    </radialGradient>
+    <radialGradient id="mountainHerbGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#A7F3D0" />
+      <stop offset="40%" stop-color="#34D399" />
+      <stop offset="80%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#064E3B" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#skyDawnNight)" />
+
+  <!-- Stars in Night Sky -->
+  <circle cx="90" cy="50" r="1.5" fill="#FFF" />
+  <circle cx="160" cy="80" r="2" fill="#FFF" />
+  <circle cx="280" cy="40" r="1.5" fill="#FFF" />
+  <circle cx="480" cy="60" r="2" fill="#FFF" />
+  <circle cx="530" cy="110" r="1.5" fill="#FFF" />
+
+  <!-- Floating Moon Horizon -->
+  <path d="M0 380 Q300 320 600 380 L600 400 L0 400 Z" fill="#0F172A" />
+
+  <!-- Mighty Flying Hanuman holding Dronagiri Mountain on Palm -->
+  <g transform="translate(260, 200)">
+    <!-- Speed Aura -->
+    <ellipse cx="0" cy="0" rx="100" ry="50" fill="#FDE68A" opacity="0.3" />
+
+    <!-- Upraised Right Arm carrying Mountain -->
+    <path d="M15 -10 L45 -70 L65 -70" stroke="#FFAE73" stroke-width="16" stroke-linecap="round" fill="none" />
+
+    <!-- The Entire Sacred Dronagiri Mountain Resting on Palm -->
+    <g transform="translate(70, -85)">
+      <!-- Luminous Herb Radiance Halo around Mountain -->
+      <circle cx="0" cy="-35" r="70" fill="url(#mountainHerbGlow)" opacity="0.8" />
+      <!-- Mountain Body Peaks -->
+      <polygon points="-55,0 0,-70 55,0" fill="#3E2723" stroke="#8D6E63" stroke-width="2" />
+      <polygon points="-25,0 15,-55 45,0" fill="#2E1C18" />
+      <!-- Luminous Herbal Plants (संजीवनी बूटियाँ) Glowing Green & Gold -->
+      <circle cx="-15" cy="-25" r="5" fill="#6EE7B7" />
+      <circle cx="10" cy="-35" r="6" fill="#FCD34D" />
+      <circle cx="0" cy="-48" r="5" fill="#34D399" />
+      <circle cx="22" cy="-15" r="4.5" fill="#A7F3D0" />
+      <path d="M-15 -25 L-15 -18 M10 -35 L10 -27 M0 -48 L0 -40" stroke="#10B981" stroke-width="2" />
+    </g>
+
+    <!-- Torso and Legs in Flight -->
+    <ellipse cx="-10" cy="10" rx="42" ry="24" fill="#FFAE73" transform="rotate(-15)" />
+    <path d="M-45 15 L-100 25" stroke="#FFAE73" stroke-width="14" stroke-linecap="round" />
+    <path d="M-40 25 L-85 45" stroke="#FFAE73" stroke-width="12" stroke-linecap="round" />
+
+    <!-- Golden Mace in other hand -->
+    <line x1="-30" y1="20" x2="-20" y2="80" stroke="#D4A64A" stroke-width="7" stroke-linecap="round" />
+    <circle cx="-20" cy="80" r="14" fill="#D4A64A" stroke="#8B1E1E" stroke-width="2" />
+
+    <!-- Head, Golden Mukut and Determined Expression -->
+    <circle cx="15" cy="-8" r="22" fill="#FFAE73" />
+    <path d="M18 -26 L36 -18 L26 -42 Z" fill="#D4A64A" stroke="#8B1E1E" stroke-width="1.5" />
+    <!-- Divine Tail soaring high -->
+    <path d="M-50 0 Q-100 -50 -55 -75 Q-25 -95 -45 -55" stroke="#F28C28" stroke-width="8" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- Badge -->
+  <rect x="170" y="340" width="260" height="42" rx="21" fill="#8B1E1E" stroke="#D4A64A" stroke-width="2" />
+  <text x="300" y="367" font-family="'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="bold" fill="#FFF8E8" text-anchor="middle">संजीवनी बूटी लाना</text>
+</svg>

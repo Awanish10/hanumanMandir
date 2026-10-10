@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fireSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D0800" />
+      <stop offset="40%" stop-color="#801502" />
+      <stop offset="80%" stop-color="#E64A0A" />
+      <stop offset="100%" stop-color="#FFC000" />
+    </linearGradient>
+    <radialGradient id="flameGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFF77" />
+      <stop offset="40%" stop-color="#FF7700" />
+      <stop offset="80%" stop-color="#DD1100" />
+      <stop offset="100%" stop-color="#550000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#fireSky)" />
+
+  <!-- Burning Palaces and Fortresses of Golden Lanka -->
+  <!-- Silhouettes of towers, minarets, and battlements -->
+  <path d="M0 400 L0 260 L40 230 L80 260 L120 200 L160 200 L180 160 L200 200 L240 250 L280 210 L330 210 L360 170 L390 210 L440 240 L480 180 L520 220 L560 190 L600 240 L600 400 Z" fill="#240502" />
+  <path d="M40 400 L80 290 L130 320 L220 260 L290 310 L380 250 L460 300 L550 260 L600 310 L600 400 Z" fill="#420B04" />
+
+  <!-- Flames leaping from towers -->
+  <path d="M70 260 Q85 190 95 240 Q110 180 125 250" fill="#FF8800" />
+  <path d="M170 180 Q190 110 200 170 Q215 120 230 190" fill="#FF4400" />
+  <path d="M350 190 Q370 100 385 170 Q400 110 415 190" fill="#FFAA00" />
+  <path d="M470 200 Q490 120 505 180 Q525 110 540 210" fill="#FF3300" />
+
+  <!-- Heroic Hanuman Ji in Mid-air Leaping across the Palaces -->
+  <g transform="translate(300, 140)">
+    <!-- Mighty Tail engulfed in Sacred Blazing Fire (पावन ज्वाला) -->
+    <g>
+      <!-- Tail curve -->
+      <path d="M-20 30 Q-90 -10 -70 -70 Q-50 -120 10 -100" stroke="#F28C28" stroke-width="9" fill="none" stroke-linecap="round" />
+      <!-- Giant Blazing Flame around tail tip -->
+      <circle cx="10" cy="-100" r="45" fill="url(#flameGlow)" />
+      <path d="M0 -90 Q-20 -150 15 -130 Q35 -160 25 -95 Z" fill="#FFE600" />
+      <path d="M-10 -95 Q-5 -135 15 -115 Z" fill="#FFFFFF" />
+    </g>
+
+    <!-- Powerful Body of Veer Hanuman in jump -->
+    <ellipse cx="20" cy="20" rx="36" ry="24" fill="#FFAE73" transform="rotate(-15)" />
+    <!-- Arms -->
+    <path d="M40 10 L85 25" stroke="#FFAE73" stroke-width="11" stroke-linecap="round" />
+    <!-- Golden Gada -->
+    <line x1="55" y1="5" x2="105" y2="-20" stroke="#D4A64A" stroke-width="6" stroke-linecap="round" />
+    <circle cx="105" cy="-20" r="10" fill="#D4A64A" stroke="#8B1E1E" stroke-width="1.5" />
+    <!-- Head & Royal Mukut -->
+    <circle cx="45" cy="0" r="20" fill="#FFAE73" />
+    <path d="M48 -16 L65 -10 L56 -32 Z" fill="#D4A64A" stroke="#8B1E1E" stroke-width="1.5" />
+    <!-- Abhaya aura -->
+    <circle cx="45" cy="0" r="28" fill="#FFF2A3" opacity="0.4" />
+  </g>
+
+  <!-- Sparks in the night air -->
+  <circle cx="210" cy="70" r="3" fill="#FFE600" />
+  <circle cx="260" cy="40" r="2.5" fill="#FF8800" />
+  <circle cx="390" cy="60" r="3" fill="#FFE600" />
+  <circle cx="440" cy="90" r="2" fill="#FFAA00" />
+
+  <!-- Badge -->
+  <rect x="200" y="340" width="200" height="42" rx="21" fill="#8B1E1E" stroke="#D4A64A" stroke-width="2" />
+  <text x="300" y="367" font-family="'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="bold" fill="#FFF8E8" text-anchor="middle">लंका दहन</text>
+</svg>

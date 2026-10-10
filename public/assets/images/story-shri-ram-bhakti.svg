@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bhaktiAura" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#FFFDF0" />
+      <stop offset="35%" stop-color="#FFE785" />
+      <stop offset="70%" stop-color="#F28C28" />
+      <stop offset="100%" stop-color="#8B1E1E" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="heartLight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#FFEB80" />
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.2" />
+    </radialGradient>
+  </defs>
+  <rect width="600" height="400" fill="#2E0E06" />
+
+  <!-- Radiance of Pure Divine Bhakti -->
+  <circle cx="300" cy="200" r="190" fill="url(#bhaktiAura)" opacity="0.8" />
+
+  <!-- Hanuman Ji Seated in Bhakti Mudra -->
+  <g transform="translate(300, 190)">
+    <!-- Mighty Shoulders & Torso -->
+    <path d="M-80 50 Q0 10 80 50 L95 180 L-95 180 Z" fill="#FFAE73" />
+
+    <!-- Open Chest Radiance -->
+    <ellipse cx="0" cy="90" rx="46" ry="54" fill="url(#heartLight)" />
+
+    <!-- Sita-Ram Divine Silhouettes visible inside Heart -->
+    <g transform="translate(0, 90)">
+      <!-- Shri Ram (Right) -->
+      <circle cx="14" cy="-14" r="10" fill="#1E3A8A" />
+      <path d="M6 -4 L22 -4 L26 22 L2 22 Z" fill="#D97706" />
+      <!-- Bow -->
+      <path d="M28 -20 Q36 2 28 24" stroke="#D4A64A" stroke-width="2" fill="none" />
+      
+      <!-- Mata Sita (Left) -->
+      <circle cx="-14" cy="-12" r="9" fill="#FCE7D2" />
+      <path d="M-22 -3 L-6 -3 L-4 22 L-24 22 Z" fill="#DC2626" />
+      
+      <!-- Golden Glow text -->
+      <text x="0" y="32" font-family="'Noto Sans Devanagari', sans-serif" font-size="11" font-weight="bold" fill="#8B1E1E" text-anchor="middle">सिया-राम</text>
+    </g>
+
+    <!-- Hands pulling apart upper chest garments / devotionally opening heart -->
+    <path d="M-65 70 L-35 85" stroke="#FFAE73" stroke-width="14" stroke-linecap="round" />
+    <path d="M65 70 L35 85" stroke="#FFAE73" stroke-width="14" stroke-linecap="round" />
+
+    <!-- Head and Sacred Tilak -->
+    <circle cx="0" cy="-25" r="32" fill="#FFAE73" />
+    <!-- Divine Mukut -->
+    <path d="M-22 -52 L22 -52 L0 -82 Z" fill="#D4A64A" stroke="#8B1E1E" stroke-width="2" />
+    <!-- Ramanandi Tilak -->
+    <path d="M-6 -42 L6 -42 L0 -24 Z" fill="#FFFFFF" />
+    <line x1="0" y1="-42" x2="0" y2="-27" stroke="#8B1E1E" stroke-width="2" />
+
+    <!-- Peaceful, tear of joy / blissful devotion -->
+    <path d="M-14 -24 Q-8 -20 0 -22" stroke="#3D2418" stroke-width="2.5" fill="none" />
+    <path d="M14 -24 Q8 -20 0 -22" stroke="#3D2418" stroke-width="2.5" fill="none" />
+    <circle cx="-8" cy="-14" r="2" fill="#60A5FA" />
+  </g>
+
+  <!-- Devotional Pearls / Pearl Necklace falling (revealing only Ram matters) -->
+  <g fill="#FFFDF5" stroke="#D4A64A" stroke-width="1">
+    <circle cx="160" cy="270" r="5" />
+    <circle cx="175" cy="290" r="5" />
+    <circle cx="195" cy="305" r="5" />
+    <circle cx="435" cy="270" r="5" />
+    <circle cx="420" cy="290" r="5" />
+    <circle cx="400" cy="305" r="5" />
+  </g>
+
+  <!-- Badge -->
+  <rect x="150" y="340" width="300" height="42" rx="21" fill="#8B1E1E" stroke="#D4A64A" stroke-width="2" />
+  <text x="300" y="367" font-family="'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="bold" fill="#FFF8E8" text-anchor="middle">श्री राम के प्रति अनन्य भक्ति</text>
+</svg>

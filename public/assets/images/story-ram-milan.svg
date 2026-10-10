@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="forestSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFEAC2" />
+      <stop offset="50%" stop-color="#F7A75B" />
+      <stop offset="100%" stop-color="#304D25" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#forestSky)" />
+
+  <!-- Mountain Rishyamook silhouette -->
+  <path d="M0 260 L120 180 L240 250 L380 160 L500 240 L600 170 L600 400 L0 400 Z" fill="#24381C" />
+
+  <!-- Peaceful Trees & Forest -->
+  <circle cx="80" cy="280" r="60" fill="#1C3015" />
+  <circle cx="520" cy="280" r="70" fill="#1C3015" />
+
+  <!-- Shri Ram & Lakshman (Divine silhouettes with bows and halos) -->
+  <g transform="translate(180, 240)">
+    <!-- Aura behind Shri Ram -->
+    <circle cx="0" cy="-40" r="32" fill="#FFE599" opacity="0.8" />
+    <!-- Bow in Hand -->
+    <path d="M-22 -80 Q-45 -20 -22 40" stroke="#D4A64A" stroke-width="4" fill="none" />
+    <!-- Figure (Shri Ram) -->
+    <circle cx="0" cy="-40" r="18" fill="#194B69" /> <!-- Meghshyam varna -->
+    <path d="M-15 -18 L15 -18 L22 60 L-22 60 Z" fill="#D97706" /> <!-- Pitambar -->
+    <!-- Quiver of Arrows -->
+    <line x1="8" y1="-55" x2="16" y2="-10" stroke="#D4A64A" stroke-width="3" />
+  </g>
+
+  <!-- Lakshman Ji -->
+  <g transform="translate(120, 250)">
+    <circle cx="0" cy="-35" r="16" fill="#F4B279" />
+    <path d="M-12 -16 L12 -16 L18 55 L-18 55 Z" fill="#C65316" />
+    <path d="M-20 -70 Q-38 -15 -20 35" stroke="#D4A64A" stroke-width="3" fill="none" />
+  </g>
+
+  <!-- Hanuman Ji Bowing in Humble Devotion (अंजुली मुद्रा) -->
+  <g transform="translate(380, 260)">
+    <!-- Aura -->
+    <circle cx="0" cy="-25" r="28" fill="#FFD07A" opacity="0.6" />
+    <!-- Head bowing slightly forward -->
+    <circle cx="-15" cy="-25" r="18" fill="#FFAE73" />
+    <!-- Torso kneeling / bending -->
+    <path d="M-30 -5 L10 5 L0 60 L-40 55 Z" fill="#C65316" />
+    <!-- Folded Hands (प्रणाम) reaching forward -->
+    <path d="M-35 -10 L-65 -15" stroke="#FFAE73" stroke-width="9" stroke-linecap="round" />
+    <!-- Sacred Tail -->
+    <path d="M0 45 Q35 25 30 -20 Q25 -50 45 -40" stroke="#F28C28" stroke-width="6" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- Floating Sacred Lotus Petals -->
+  <circle cx="280" cy="200" r="4" fill="#F87171" />
+  <circle cx="310" cy="220" r="5" fill="#F87171" />
+  <circle cx="250" cy="240" r="4" fill="#FBBF24" />
+
+  <!-- Badge -->
+  <rect x="150" y="340" width="300" height="42" rx="21" fill="#8B1E1E" stroke="#D4A64A" stroke-width="2" />
+  <text x="300" y="367" font-family="'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="bold" fill="#FFF8E8" text-anchor="middle">श्री राम और हनुमान जी का मिलन</text>
+</svg>

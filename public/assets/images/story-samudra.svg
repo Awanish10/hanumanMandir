@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="oceanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#144C6E" />
+      <stop offset="50%" stop-color="#0E2D47" />
+      <stop offset="100%" stop-color="#06182B" />
+    </linearGradient>
+    <linearGradient id="skyOcean" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9C3A08" />
+      <stop offset="60%" stop-color="#F28C28" />
+      <stop offset="100%" stop-color="#FFDD99" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="260" fill="url(#skyOcean)" />
+  <rect y="260" width="600" height="140" fill="url(#oceanGrad)" />
+
+  <!-- Ocean Waves -->
+  <path d="M0 260 Q40 245 80 260 T160 260 T240 260 T320 260 T400 260 T480 260 T560 260 T640 260 L600 400 L0 400 Z" fill="#144C6E" opacity="0.6" />
+  <path d="M-20 280 Q30 265 70 280 T150 280 T230 280 T310 280 T390 280 T470 280 T550 280 L600 400 L0 400 Z" fill="#0C253B" opacity="0.7" />
+  <!-- Foam crests -->
+  <path d="M40 256 Q70 248 90 256 M180 256 Q210 248 230 256 M340 256 Q370 248 390 256" stroke="#E0F2FE" stroke-width="2" fill="none" />
+
+  <!-- Mountain from which he leaped (Mahendra Parvat) -->
+  <path d="M0 260 L80 180 L140 260 Z" fill="#3D1A0E" />
+
+  <!-- Colossal Hanuman Ji in Sky (flying towards right) -->
+  <g transform="translate(320, 120)">
+    <!-- Aura of speed and devotion -->
+    <ellipse cx="0" cy="0" rx="90" ry="45" fill="#FFF2A3" opacity="0.5" />
+    <!-- Dynamic Gada in Hand -->
+    <line x1="-30" y1="20" x2="60" y2="-25" stroke="#D4A64A" stroke-width="8" stroke-linecap="round" />
+    <circle cx="60" cy="-25" r="14" fill="#D4A64A" stroke="#8B1E1E" stroke-width="2" />
+    <!-- Body flying forward horizontal -->
+    <ellipse cx="0" cy="0" rx="42" ry="22" fill="#FFAE73" />
+    <!-- Stretched legs -->
+    <path d="M-35 5 L-90 15" stroke="#FFAE73" stroke-width="12" stroke-linecap="round" />
+    <!-- Curled Tail high in sky -->
+    <path d="M-40 -5 Q-70 -60 -30 -70 Q10 -70 -10 -40" stroke="#F28C28" stroke-width="8" fill="none" stroke-linecap="round" />
+    <!-- Head with Mukut and concentrated gaze -->
+    <circle cx="35" cy="-8" r="20" fill="#FFAE73" />
+    <path d="M38 -25 L55 -15 L45 -38 Z" fill="#D4A64A" stroke="#8B1E1E" stroke-width="1.5" />
+    <!-- Forward arm holding Mudrika / pointing -->
+    <path d="M25 5 L75 5" stroke="#FFAE73" stroke-width="10" stroke-linecap="round" />
+  </g>
+
+  <!-- Badge -->
+  <rect x="160" y="340" width="280" height="42" rx="21" fill="#8B1E1E" stroke="#D4A64A" stroke-width="2" />
+  <text x="300" y="367" font-family="'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="bold" fill="#FFF8E8" text-anchor="middle">समुद्र लांघकर लंका प्रस्थान</text>
+</svg>

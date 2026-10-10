@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="skyGlow" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFEAA7" />
+      <stop offset="40%" stop-color="#F28C28" />
+      <stop offset="85%" stop-color="#8B1E1E" />
+      <stop offset="100%" stop-color="#3D120B" />
+    </radialGradient>
+    <linearGradient id="shikharGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C65316" />
+      <stop offset="25%" stop-color="#F59E0B" />
+      <stop offset="50%" stop-color="#FDE047" />
+      <stop offset="75%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#8B1E1E" />
+    </linearGradient>
+    <linearGradient id="flagSaffron" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#FF5722" />
+      <stop offset="100%" stop-color="#F28C28" />
+    </linearGradient>
+  </defs>
+
+  <!-- Divine Background -->
+  <rect width="600" height="400" fill="url(#skyGlow)" />
+
+  <!-- Temple Shikhara Structure (मंदिर शिखर) -->
+  <g transform="translate(300, 260)">
+    <!-- Main Sanctum Tower (शिखर आधार) -->
+    <path d="M-130 90 L-110 -20 Q-70 -120 -20 -180 L20 -180 Q70 -120 110 -20 L130 90 Z" fill="url(#shikharGold)" stroke="#6B1212" stroke-width="2" />
+    
+    <!-- Intricate Shikhara Urushringa ridges (उरुश्रृंग - नक्काशीदार धारियाँ) -->
+    <path d="M-80 90 L-70 0 Q-40 -90 -10 -170" stroke="#FFEAA7" stroke-width="2.5" fill="none" opacity="0.8" />
+    <path d="M80 90 L70 0 Q40 -90 10 -170" stroke="#875E19" stroke-width="2.5" fill="none" opacity="0.8" />
+    <path d="M0 90 L0 -175" stroke="#FFF" stroke-width="2" stroke-dasharray="6,4" opacity="0.6" />
+
+    <!-- Amalaka (आमलक - चक्राकार शिला) -->
+    <ellipse cx="0" cy="-185" rx="35" ry="12" fill="#D4A64A" stroke="#78350F" stroke-width="2" />
+    <ellipse cx="0" cy="-192" rx="28" ry="10" fill="#FDE047" stroke="#78350F" stroke-width="1.5" />
+
+    <!-- Kalash (स्वर्ण कलश) -->
+    <path d="M-14 -194 Q-20 -210 0 -220 Q20 -210 14 -194 Z" fill="#FFEAA7" stroke="#78350F" stroke-width="1.5" />
+    <circle cx="0" cy="-223" r="5" fill="#FFF" />
+
+    <!-- Flag Mast & Sacred Saffron Flag (केसरिया धर्म ध्वज) -->
+    <line x1="0" y1="-223" x2="0" y2="-275" stroke="#FFEAA7" stroke-width="3" stroke-linecap="round" />
+    <!-- Triangular waving flag with Lord Hanuman symbol/Sun -->
+    <path d="M0 -275 Q45 -260 90 -270 L0 -235 Z" fill="url(#flagSaffron)" stroke="#DC2626" stroke-width="1" />
+    <!-- Sun symbol on flag -->
+    <circle cx="28" cy="-256" r="6" fill="#FDE047" />
+
+    <!-- Base platform & Temple Pillars -->
+    <rect x="-160" y="80" width="320" height="30" rx="4" fill="#B45309" stroke="#78350F" stroke-width="2" />
+    <rect x="-180" y="105" width="360" height="35" rx="4" fill="#92400E" stroke="#78350F" stroke-width="2" />
+  </g>
+
+  <!-- Devotional Label Banner -->
+  <rect x="180" y="345" width="240" height="40" rx="20" fill="#8B1E1E" stroke="#D4A64A" stroke-width="2" />
+  <text x="300" y="371" font-family="'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="bold" fill="#FFF8E8" text-anchor="middle">मंदिर शिखर एवं ध्वजा</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="nightVatika" cx="60%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#2D3A4B" />
+      <stop offset="50%" stop-color="#1A2433" />
+      <stop offset="100%" stop-color="#0E131C" />
+    </radialGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#E2EEF9" />
+      <stop offset="100%" stop-color="#8BB7DB" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#nightVatika)" />
+
+  <!-- Moon in night sky -->
+  <circle cx="480" cy="80" r="45" fill="url(#moonGlow)" />
+  <circle cx="480" cy="80" r="30" fill="#FFFDF5" />
+
+  <!-- Ashok Tree Silhouette & Foliage -->
+  <path d="M140 400 L160 220 L130 140 L190 120 L230 220 L250 400 Z" fill="#2E1B10" />
+  <!-- Rich green foliage branches -->
+  <ellipse cx="200" cy="110" rx="90" ry="60" fill="#1C3825" />
+  <ellipse cx="140" cy="150" rx="70" ry="50" fill="#142C1D" />
+  <ellipse cx="260" cy="140" rx="80" ry="50" fill="#142C1D" />
+
+  <!-- Mata Sita Seated under the Tree -->
+  <g transform="translate(290, 260)">
+    <!-- Halo of Purity around Janaki -->
+    <circle cx="0" cy="-25" r="30" fill="#FFFFFF" opacity="0.4" />
+    <!-- White / Light yellow ascetic saree -->
+    <circle cx="0" cy="-25" r="16" fill="#FCE7D2" />
+    <path d="M-15 -10 L15 -10 L25 70 L-25 70 Z" fill="#FFF4D6" stroke="#D4A64A" stroke-width="1.5" />
+    <!-- Folded hands in remembrance of Rama -->
+    <path d="M-10 15 L0 25 L10 15" stroke="#FCE7D2" stroke-width="4" fill="none" />
+  </g>
+
+  <!-- Sukshma Roop Hanuman Ji in Tree Branch -->
+  <g transform="translate(190, 110)">
+    <circle cx="0" cy="0" r="14" fill="#FFAE73" />
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#FFEBA3" stroke-width="2" stroke-dasharray="3,2" />
+    <!-- Tail on branch -->
+    <path d="M-10 8 Q-25 -5 -15 -25" stroke="#F28C28" stroke-width="4" fill="none" />
+    <!-- Dropping Golden Mudrika (श्री राम की अंगूठी) -->
+    <g transform="translate(25, 45)">
+      <circle cx="0" cy="0" r="9" fill="none" stroke="#FFE600" stroke-width="3" />
+      <circle cx="0" cy="-6" r="3" fill="#EF4444" />
+      <!-- Radiating sparkles -->
+      <line x1="0" y1="-12" x2="0" y2="-16" stroke="#FFE600" stroke-width="1.5" />
+      <line x1="-12" y1="0" x2="-16" y2="0" stroke="#FFE600" stroke-width="1.5" />
+      <line x1="12" y1="0" x2="16" y2="0" stroke="#FFE600" stroke-width="1.5" />
+    </g>
+  </g>
+
+  <!-- Ground flowers in garden -->
+  <circle cx="370" cy="340" r="5" fill="#F87171" />
+  <circle cx="410" cy="355" r="4" fill="#F43F5E" />
+  <circle cx="340" cy="360" r="5" fill="#FB923C" />
+
+  <!-- Badge -->
+  <rect x="150" y="340" width="300" height="42" rx="21" fill="#8B1E1E" stroke="#D4A64A" stroke-width="2" />
+  <text x="300" y="367" font-family="'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="bold" fill="#FFF8E8" text-anchor="middle">अशोक वाटिका में मुद्रिका भेंट</text>
+</svg>
